@@ -3,6 +3,8 @@ timezone: Asia/Seoul
 title: mye785C83 
 author: mye785C83
 
+baseurl: '/mye785c83.github.io'
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
