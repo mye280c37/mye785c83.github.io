@@ -1,12 +1,18 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}" {{ prefer_mode }}>
+<html lang="{{ site.lang | default: "en-US" }}" {{ prefer_mode }} style="height: 100% !important;">
 
   {% include head.html %}
 
-  <body style="background-color: #efefef;">
-    {% include navigation.html %}
-    <div class="container-fluid p-5">
-      {{ content }}
+  <body style="background-color: #efefef; height: 100% !important;">
+    <div class="row">
+      <div class="col-md-3">
+        {% include navigation.html %}
+      </div>
+      <div class="col-md-9">
+        <div class="container-fluid p-5">
+          {{ content }}
+        </div>
+      </div>
     </div>
   </body>
 </html>
