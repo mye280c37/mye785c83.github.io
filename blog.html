@@ -2,13 +2,23 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+<div class="px-5 mx-3">
+{% for category in site.data.categories%}
+  <div class="card p-4 mb-5">
+    <h2 class="h2 mb-4">
+      {{ category.name }}
+      <div class="underline-box"></div>
+    </h2>
+    <ul>
+    {% for post in site.posts %}
+    {% if post.category == category.name %}
+      <li>
+        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+      </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+</div>

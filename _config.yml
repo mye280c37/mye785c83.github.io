@@ -2,8 +2,11 @@ lang: ko-KR
 timezone: Asia/Seoul
 title: mye785C83 
 author: mye785C83
+github:
+  username: mye785C83
+  url: 'https://github.com/mye785C83'
 
-baseurl: '/mye785c83.github.io'
+# baseurl: '/mye785c83.github.io'
 
 plugins:
   - jekyll-feed

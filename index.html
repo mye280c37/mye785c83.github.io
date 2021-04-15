@@ -1,40 +1,20 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>mye785c83</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<!-- <script src="js/three.js"></script> -->
-		<script type="module">
-            import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+---
+layout: default
+title: mye785c83
+---
 
-			const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize( window.innerWidth, window.innerHeight );
-            document.body.appendChild( renderer.domElement );
-
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add( cube );
-
-            camera.position.z = 5;
-
-            function animate() {
-                requestAnimationFrame( animate );
-
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                renderer.render( scene, camera );
-            }
-            animate();
-		</script>
-	</body>
-</html>
+<h3 class="h3 mb-5">Latest Posts</h3>
+<div class="pl-3">
+    <ul>
+    {% assign count=0 %}
+        {% for post in site.posts %}
+        {% if count<3 %}
+        <li>
+            <h5 class="h5"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+            <p>{{ post.excerpt }}</p>
+        </li>
+        {% endif %}
+        {% assign count=count|plus:1 %}
+    {% endfor %}
+    </ul>
+</div>

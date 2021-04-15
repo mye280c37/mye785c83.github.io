@@ -1,0 +1,22 @@
+<!--
+  Navigation buttons at the bottom of the post.
+-->
+<div class="mt-5 post-nav p-3">
+  <div>{{ page.category }}의 다른 글</div>
+  <div class="underline-box"></div>
+  <div class="mt-3 px-2">
+      <ul>
+        {% assign count=0 %}
+          {% for post in site.posts %}
+            {% if count<5 %}
+              {% if post.category == page.category %}
+                {% unless post.title == page.title %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+            {% assign count=count|plus:1 %}
+          {% endfor %}
+      </ul>
+  </div>
+</div>

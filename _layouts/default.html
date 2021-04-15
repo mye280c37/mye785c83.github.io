@@ -1,14 +1,12 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {% feed_meta %}
-    {% seo %}
-  </head>
-  <body>
+<html lang="{{ site.lang | default: "en-US" }}" {{ prefer_mode }}>
+
+  {% include head.html %}
+
+  <body style="background-color: #efefef;">
     {% include navigation.html %}
-    {{ content }}
+    <div class="container-fluid p-5">
+      {{ content }}
+    </div>
   </body>
 </html>

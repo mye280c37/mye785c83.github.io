@@ -1,7 +1,103 @@
 ---
 ---
 
+html body {
+    background-color: #efefef !important;
+}
+
+nav {
+    color: rgb(233, 219, 140);
+}
+
+div {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul a, ul a:hover, .post-nav div a {
+    color: black !important;
+    text-decoration: none;
+}
+
 .current {
     color: green;
 }
-@import "main";
+
+.masthead{
+    text-align: center;
+    margin: 0;
+    padding: 3rem;
+}
+
+.masthead h1{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 6vw;
+    color: rgb(233, 218, 136);
+    text-shadow: 1px 1px 2px pink;
+}
+
+@media (max-width: 991.9px){
+    .masthead h1{
+        font-size: 10vw;
+    }
+}
+
+.bg-785c83{
+    background-color: #785c83;
+}
+
+.nav-link {
+    color: rgb(233, 218, 136);
+}
+
+.nav-link:hover, .nav-link:active, .nav-link:visited {
+    color: rgb(233, 218, 136);
+    text-decoration: underline;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, .6) !important;
+    border-top: rgba(47, 17, 59, 0) !important;
+    border-left: rgba(47, 17, 59, 0) !important;
+    border-right: 2px solid rgba(47, 17, 59, 0.8) !important;
+    border-bottom: 2px solid rgba(47, 17, 59, 0.8) !important;
+    border-radius: .2rem !important;
+}
+
+.card h2 .underline-box{
+    background-color: rgba(47, 17, 59, 0.8) !important;
+    height: 3px;
+    width: 40%;
+    margin-top: 0.7rem;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.post {
+    min-height: 500px;
+}
+
+.post-nav {
+    border: 1.5px solid rgba(47, 17, 59, 0.8) !important;
+    min-height: 50px;
+    border-radius: .2rem !important;
+}
+
+.post-nav .underline-box{
+    background-color: rgba(47, 17, 59, 0.8) !important;
+    height: 1.5px;
+    width: 35%;
+    margin-top: 0.7rem;
+}
+
+.post-nav li a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.post-nav li a:hover{
+    color: rgba(47, 17, 59, 0.8) !important;
+    text-decoration: none;
+    font-weight: bold;
+}

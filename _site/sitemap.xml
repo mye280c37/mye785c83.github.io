@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/mye785c83.github.io/2018/08/20/bananas.html</loc>
+<loc>/as818/2018/08/20/bananas.html</loc>
 <lastmod>2018-08-20T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>/mye785c83.github.io/2018/08/21/apples.html</loc>
+<loc>/as818/2018/08/20/bananas2.html</loc>
+<lastmod>2018-08-20T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/web%20programming/2018/08/21/apples.html</loc>
 <lastmod>2018-08-21T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>/mye785c83.github.io/about.html</loc>
+<loc>/about.html</loc>
 </url>
 <url>
-<loc>/mye785c83.github.io/blog.html</loc>
+<loc>/blog.html</loc>
 </url>
 <url>
-<loc>/mye785c83.github.io/</loc>
-<lastmod>2021-04-13T21:46:29+09:00</lastmod>
+<loc>/</loc>
+</url>
+<url>
+<loc>/threeJS.html</loc>
+<lastmod>2021-04-15T22:07:03+09:00</lastmod>
 </url>
 </urlset>
