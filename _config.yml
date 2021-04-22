@@ -38,3 +38,10 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false

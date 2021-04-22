@@ -6,6 +6,28 @@ html, body {
     height: 100% !important;
 }
 
+li {
+    padding: 0.25rem 0;
+}
+
+.math-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.math-table thead tr th, .math-table tbody tr td {
+    padding: 0.3rem 1rem;
+}
+
+.math-table thead {
+    border-bottom: thick double #000;
+}
+
+.math-table tbody tr {
+    border-bottom: 1px solid #000;
+}
+
 .row {
     height: 100% !important;
     margin: 0 !important;
@@ -19,6 +41,7 @@ html, body {
     position:fixed;
     height: 100%;
     padding: 0 2rem;
+    z-index: 2;
 }
 
 @media (max-width: 767.9px) {
@@ -133,4 +156,16 @@ ul a, ul a:hover, .post-nav div a {
     color: rgba(47, 17, 59, 0.8) !important;
     text-decoration: none;
     font-weight: bold;
+}
+
+.post-title:hover{
+    text-decoration: underline;
+}
+
+.comment-box{
+    background-color: rgba(47, 17, 59, 0.8);
+    border-radius: 0.25rem;
+    color: blanchedalmond;
+    padding: 1rem 1.5rem;
+    margin-bottom: 15px;
 }

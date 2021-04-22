@@ -10,8 +10,7 @@ title: mye785c83
         {% for post in site.posts %}
         {% if count<3 %}
         <li>
-            <h5 class="h5"><a href="{{ post.url }}">{{ post.title }}</a></h5>
-            <p>{{ post.excerpt }}</p>
+            <h5 class="h5"><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
         </li>
         {% endif %}
         {% assign count=count|plus:1 %}

@@ -11,25 +11,25 @@
         
     
 
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="mye785C83" />
+    <link type="application/atom+xml" rel="alternate" href="/mye785c83.github.io/feed.xml" title="mye785C83" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" />
+<meta property="og:title" content="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)" />
 <meta name="author" content="mye785C83" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="1. Introduction 2. Related Work 3. Preliminaries and Motivation assume multiple orthogonal channels 4. Proposed Scheme" />
-<meta property="og:description" content="1. Introduction 2. Related Work 3. Preliminaries and Motivation assume multiple orthogonal channels 4. Proposed Scheme" />
+<meta name="description" content="Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가" />
+<meta property="og:description" content="Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가" />
 <meta property="og:site_name" content="mye785C83" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-04-20T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" />
+<meta property="twitter:title" content="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/as818/2021/04/20/10.1155_2019_2149606.html"},"description":"1. Introduction 2. Related Work 3. Preliminaries and Motivation assume multiple orthogonal channels 4. Proposed Scheme","url":"/as818/2021/04/20/10.1155_2019_2149606.html","author":{"@type":"Person","name":"mye785C83"},"headline":"A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs","dateModified":"2021-04-20T00:00:00+09:00","datePublished":"2021-04-20T00:00:00+09:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/as818/2021/04/20/10.1155_2019_2149606.html"},"description":"Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가","url":"/mye785c83.github.io/as818/2021/04/20/10.1155_2019_2149606.html","author":{"@type":"Person","name":"mye785C83"},"headline":"A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)","dateModified":"2021-04-20T00:00:00+09:00","datePublished":"2021-04-20T00:00:00+09:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <title>A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs | mye785C83
+    <title>A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중) | mye785C83
     </title>
 
     <!-- css -->
@@ -49,6 +49,32 @@
     <!-- Bootstrap -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['\$$', '\$$'] ],
+        processEscapes: true,
+      }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
 </head>
 
   <body style="background-color: #efefef; height: 100% !important;">
@@ -84,14 +110,288 @@
         <div class="container-fluid p-5">
           <div class="px-5 mx-3">
     <div class="post">
-       <h1 class="h1 py-5">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</h1>
+       <h1 class="h1 py-5">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)</h1>
         <div class="text-right">AS818</div>
         <div class="pb-5 text-right">20 Apr 2021 - mye785c83</div>
-        <div class="px-4"><h2 id="1-introduction">1. Introduction</h2>
-<h2 id="2-related-work">2. Related Work</h2>
-<h2 id="3-preliminaries-and-motivation">3. Preliminaries and Motivation</h2>
-<p>assume multiple orthogonal channels</p>
-<h2 id="4-proposed-scheme">4. Proposed Scheme</h2>
+        <div class="px-4"><h2 id="problem">Problem</h2>
+<p>density 증가로 인해</p>
+<ul>
+  <li>DCF의 unfair share of bandwidth among nodes issue</li>
+  <li>CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="proposed-scheme">Proposed Scheme</h2>
+<p><br /></p>
+
+<h3 id="assumptions">Assumptions</h3>
+<ol>
+  <li>All channels are orthogonal.</li>
+  <li>APs can simultaneously access all channels.</li>
+  <li>The network interface is capable of splitting a channel into multiple narrow channels</li>
+  <li>When a channel is split, the network interface can simultaneously accesses the narrow channels.</li>
+</ol>
+
+<h3 id="main-idea">Main Idea</h3>
+<p>associated AP와 <strong>“distance”</strong>가 비슷한 node를 grouping &amp; assigning <span style="color:red">same</span> channel</p>
+<div class="comment-box">
+<p>
+👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록</p>
+👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 <strong>"received signal strength"</strong> 를 기반으로 측정한 distance이다
+</div>
+<p><br /></p>
+
+<h4 id="channel-assignment">Channel Assignment</h4>
+<p>$C$ orthogonal channels, $N$ high traffic node, $M$ low traffic node가 있다고 할 때</p>
+<ol>
+  <li>$N$ 개의 high traffic demand node $n_{i,\ (i=0, … , N-1)}$ 에 대해 AP와 node 사이의 received signal strength($RSSI$) 내림차순으로 indexing
+ $$
+ \cases{max(RSSI(n_i), i=0, … , N-1)=RSSI(n_0)\cr
+ min(RSSI(n_i), i=0, … , N-1)=RSSI(n_{N-1})}
+ $$</li>
+  <li>high traffic demand node를 distance가 작은 순서대로 $C$등분하여 channel index $0$부터 $(C-1)$까지 할당</li>
+  <li>$M$ 개의 low traffic demand node $m_{i,\ (i=0, … ,M-1)}$ 에 대해 AP와 node 사이의 received signal strength($RSSI$) 내림차순으로 indexing
+ $$
+ \cases{max(RSSI(m_i), i=0, … , N-1)=RSSI(m_0)\cr
+ min(RSSI(m_i), i=0, … , M-1)=RSSI(m_{M-1})}
+ $$</li>
+</ol>
+
+<p>2번에서 각 channel에는 먼저 $K(\lceil{N\over C}\rceil)$개의 high traffic node가 할당되며 channel $ch_i$에 할당된 node ($n_{k,\ (i\times k \leq k \leq (i+1) \times k-1)}$)의 $RSSI$ 최솟값을 $r_i$ 라 하자. ($r_i=RSSI(n_{(i+1) \times k-1})$)
+$$
+CH(n_i) = ch_{\lfloor {i \over K} \rfloor}
+$$</p>
+
+<p>3번에서 indexing한 low demand node들을 channel에 할당하는 방법은 아래와 같다.
+$$
+CH(m_i) = \cases{
+    ch_0,\qquad \text{if }RSSI(m_i) \geq r_0 \cr
+    ch_k, \qquad \text{if }r_{k-1}&gt;RSSI(m_i)\geq r_k \cr
+    ch_{C-1}, \qquad \text{if }r_{C-2} &gt; RSSI(m_i)<br />
+}
+$$</p>
+
+<p>즉, $ch_{C-1}$에 할당된 node들을 제외하고 해당 채널에 할당된 node들의 $RSSI$는 $r_i$보다 항상 크거나 같아야 한다.</p>
+
+<p>아래 표는 $C=3, N=10, M=5$ 일 때 $N$개의 node와 $M$개의 node의 $RSSI$에 따라 할당되는 채널을 나타낸 것이다.</p>
+
+<p>먼저 high demand node의 $RSSI$와 $\text{channel}$은 아래 표와 같다. ($K=\lceil{10 \over 3}\rceil=4$)</p>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">$\text{node}$</th>
+      <th style="text-align: center">$RSSI$</th>
+      <th style="text-align: center">$\text{channel}$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">$n_0$</td>
+      <td style="text-align: center">$3.6$</td>
+      <td style="text-align: center">$0$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_1$</td>
+      <td style="text-align: center">$3.0$</td>
+      <td style="text-align: center">$0$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_2$</td>
+      <td style="text-align: center">$2.0$</td>
+      <td style="text-align: center">$0$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_3$</td>
+      <td style="text-align: center">$1.96$</td>
+      <td style="text-align: center">$0$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_4$</td>
+      <td style="text-align: center">$1.6$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_5$</td>
+      <td style="text-align: center">$1.5$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_6$</td>
+      <td style="text-align: center">$0.87$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_7$</td>
+      <td style="text-align: center">$0.56$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_8$</td>
+      <td style="text-align: center">$0.54$</td>
+      <td style="text-align: center">$2$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$n_9$</td>
+      <td style="text-align: center">$0.3$</td>
+      <td style="text-align: center">$2$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위의 표에 따른 각 채널의 최소 $RSSI$ 는 아래 표와 같다.</p>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">$\text{channel}$</th>
+      <th style="text-align: center">$r_i$</th>
+      <th style="text-align: center">$RSSI(node)$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">$ch_0$</td>
+      <td style="text-align: center">$1.96$</td>
+      <td style="text-align: center">$RSSI(n_3)$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$ch_1$</td>
+      <td style="text-align: center">$0.56$</td>
+      <td style="text-align: center">$RSSI(n_7)$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$ch_2$</td>
+      <td style="text-align: center">$0.3$</td>
+      <td style="text-align: center">$RSSI(n_9)$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위의 $r_i$ 값을 바탕으로 작성한 low demand node의 $RSSI$와 $\text{channel}$은 아래 표와 같다.</p>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">$\text{node}$</th>
+      <th style="text-align: center">$RSSI$</th>
+      <th style="text-align: center">$\text{channel}$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">$m_0$</td>
+      <td style="text-align: center">$3.12$</td>
+      <td style="text-align: center">$0$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$m_1$</td>
+      <td style="text-align: center">$1.71$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$m_2$</td>
+      <td style="text-align: center">$1.33$</td>
+      <td style="text-align: center">$1$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$m_3$</td>
+      <td style="text-align: center">$0.43$</td>
+      <td style="text-align: center">$2$</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$m_4$</td>
+      <td style="text-align: center">$0.2$</td>
+      <td style="text-align: center">$2$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>결과적으로 각 채널에 할당된 node($N+M$)들은 아래와 같다.</p>
+<div class="comment-box">
+👉 $RSSI$ 값이 클수록 distance는 작다.
+</div>
+
+<table class="math-table">
+<thead>
+<tr>
+    <th>$\text{channel}$</th>
+    <th>$\text{node}$ ($\text{RSSI}$ 내림차순)</th>
+    <th>$\text{RSSI}$</th>
+</tr>
+</thead>
+<tbody style="text-align: center;">
+<tr>
+    <td rowspan="5">$ch_0$</td>
+    <td style="color: red;">$n_0$</td>
+    <td>$3.6$</td>
+</tr>
+<tr>
+    <td style="color: blue;">$m_0$</td>
+    <td>$3.12$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_1$</td>
+    <td>$3.0$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_2$</td>
+    <td>$2.0$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_3$</td>
+    <td>$1.96$</td>
+</tr>
+<tr>
+    <td rowspan="6">$ch_1$</td>
+    <td style="color: blue;">$m_1$</td>
+    <td>$1.71$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_4$</td>
+    <td>$1.6$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_5$</td>
+    <td>$1.5$</td>
+</tr>
+<tr>
+    <td style="color: blue;">$m_2$</td>
+    <td>$1.33$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_6$</td>
+    <td>$0.87$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_7$</td>
+    <td>$0.56$</td>
+</tr>
+<tr>
+    <td rowspan="4">$ch_2$</td>
+    <td style="color: red;">$n_8$</td>
+    <td>$0.54$</td>
+</tr>
+<tr>
+    <td style="color: blue;">$m_3$</td>
+    <td>$0.43$</td>
+</tr>
+<tr>
+    <td style="color: red;">$n_9$</td>
+    <td>$0.3$</td>
+</tr>
+<tr>
+    <td style="color: blue;">$m_4$</td>
+    <td>$0.2$</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="carrier-sense-threshold-assignment">Carrier Sense Threshold Assignment</h4>
+<p>이제 grouping 된 node를 바탕으로 $\text{path loss model}$을 이용해 각 channel의 carrier sense threshold를 추정한다.</p>
+
+<p>이때 기준은 각 group에서 $RSSI$가 가장 작은 node(distance가 가장 먼) node를 기준으로 $\text{CST}$ 를 추정한다. ( $r_i$를 가지는 $\text{high demand node}$ )</p>
 </div>
     </div>
     
@@ -113,15 +413,6 @@
             
           
             
-              
-            
-            
-          
-            
-              
-                
-                <li><a href="/as818/2018/08/20/bananas2.html">Bananas2</a></li>
-                
               
             
             

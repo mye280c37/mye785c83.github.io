@@ -14,7 +14,7 @@ title: Blog
     {% for post in site.posts %}
     {% if post.category == category.name %}
       <li>
-        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <h5><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
       </li>
     {% endif %}
     {% endfor %}

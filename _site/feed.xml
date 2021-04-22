@@ -1,18 +1,285 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-04-20T18:28:33+09:00</updated><id>/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/as818/2021/04/20/10.1155_2019_2149606.html" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/as818/2021/04/20/10.1155_2019_2149606</id><content type="html" xml:base="/as818/2021/04/20/10.1155_2019_2149606.html">&lt;h2 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h2&gt;
-&lt;h2 id=&quot;2-related-work&quot;&gt;2. Related Work&lt;/h2&gt;
-&lt;h2 id=&quot;3-preliminaries-and-motivation&quot;&gt;3. Preliminaries and Motivation&lt;/h2&gt;
-&lt;p&gt;assume multiple orthogonal channels&lt;/p&gt;
-&lt;h2 id=&quot;4-proposed-scheme&quot;&gt;4. Proposed Scheme&lt;/h2&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><summary type="html">1. Introduction 2. Related Work 3. Preliminaries and Motivation assume multiple orthogonal channels 4. Proposed Scheme</summary></entry><entry><title type="html">Apples</title><link href="/web%20programming/2018/08/21/apples.html" rel="alternate" type="text/html" title="Apples" /><published>2018-08-21T00:00:00+09:00</published><updated>2018-08-21T00:00:00+09:00</updated><id>/web%20programming/2018/08/21/apples</id><content type="html" xml:base="/web%20programming/2018/08/21/apples.html">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-04-22T16:22:21+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)</title><link href="/mye785c83.github.io/as818/2021/04/20/10.1155_2019_2149606.html" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/as818/2021/04/20/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/as818/2021/04/20/10.1155_2019_2149606.html">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;density 증가로 인해&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;DCF의 unfair share of bandwidth among nodes issue&lt;/li&gt;
+  &lt;li&gt;CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;proposed-scheme&quot;&gt;Proposed Scheme&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;All channels are orthogonal.&lt;/li&gt;
+  &lt;li&gt;APs can simultaneously access all channels.&lt;/li&gt;
+  &lt;li&gt;The network interface is capable of splitting a channel into multiple narrow channels&lt;/li&gt;
+  &lt;li&gt;When a channel is split, the network interface can simultaneously accesses the narrow channels.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;main-idea&quot;&gt;Main Idea&lt;/h3&gt;
+&lt;p&gt;associated AP와 &lt;strong&gt;“distance”&lt;/strong&gt;가 비슷한 node를 grouping &amp;amp; assigning &lt;span style=&quot;color:red&quot;&gt;same&lt;/span&gt; channel&lt;/p&gt;
+&lt;div class=&quot;comment-box&quot;&gt;
+&lt;p&gt;
+👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록&lt;/p&gt;
+👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 &lt;strong&gt;&quot;received signal strength&quot;&lt;/strong&gt; 를 기반으로 측정한 distance이다
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;channel-assignment&quot;&gt;Channel Assignment&lt;/h4&gt;
+&lt;p&gt;$C$ orthogonal channels, $N$ high traffic node, $M$ low traffic node가 있다고 할 때&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;$N$ 개의 high traffic demand node $n_{i,\ (i=0, … , N-1)}$ 에 대해 AP와 node 사이의 received signal strength($RSSI$) 내림차순으로 indexing
+ $$
+ \cases{max(RSSI(n_i), i=0, … , N-1)=RSSI(n_0)\cr
+ min(RSSI(n_i), i=0, … , N-1)=RSSI(n_{N-1})}
+ $$&lt;/li&gt;
+  &lt;li&gt;high traffic demand node를 distance가 작은 순서대로 $C$등분하여 channel index $0$부터 $(C-1)$까지 할당&lt;/li&gt;
+  &lt;li&gt;$M$ 개의 low traffic demand node $m_{i,\ (i=0, … ,M-1)}$ 에 대해 AP와 node 사이의 received signal strength($RSSI$) 내림차순으로 indexing
+ $$
+ \cases{max(RSSI(m_i), i=0, … , N-1)=RSSI(m_0)\cr
+ min(RSSI(m_i), i=0, … , M-1)=RSSI(m_{M-1})}
+ $$&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2번에서 각 channel에는 먼저 $K(\lceil{N\over C}\rceil)$개의 high traffic node가 할당되며 channel $ch_i$에 할당된 node ($n_{k,\ (i\times k \leq k \leq (i+1) \times k-1)}$)의 $RSSI$ 최솟값을 $r_i$ 라 하자. ($r_i=RSSI(n_{(i+1) \times k-1})$)
+$$
+CH(n_i) = ch_{\lfloor {i \over K} \rfloor}
+$$&lt;/p&gt;
+
+&lt;p&gt;3번에서 indexing한 low demand node들을 channel에 할당하는 방법은 아래와 같다.
+$$
+CH(m_i) = \cases{
+    ch_0,\qquad \text{if }RSSI(m_i) \geq r_0 \cr
+    ch_k, \qquad \text{if }r_{k-1}&amp;gt;RSSI(m_i)\geq r_k \cr
+    ch_{C-1}, \qquad \text{if }r_{C-2} &amp;gt; RSSI(m_i)&lt;br /&gt;
+}
+$$&lt;/p&gt;
+
+&lt;p&gt;즉, $ch_{C-1}$에 할당된 node들을 제외하고 해당 채널에 할당된 node들의 $RSSI$는 $r_i$보다 항상 크거나 같아야 한다.&lt;/p&gt;
+
+&lt;p&gt;아래 표는 $C=3, N=10, M=5$ 일 때 $N$개의 node와 $M$개의 node의 $RSSI$에 따라 할당되는 채널을 나타낸 것이다.&lt;/p&gt;
+
+&lt;p&gt;먼저 high demand node의 $RSSI$와 $\text{channel}$은 아래 표와 같다. ($K=\lceil{10 \over 3}\rceil=4$)&lt;/p&gt;
+
+&lt;table class=&quot;math-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$\text{node}$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$RSSI$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$\text{channel}$&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_0$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$3.6$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_1$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$3.0$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_2$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$2.0$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_3$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.96$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_4$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.6$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_5$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.5$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_6$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.87$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_7$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.56$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_8$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.54$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$2$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$n_9$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.3$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$2$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;위의 표에 따른 각 채널의 최소 $RSSI$ 는 아래 표와 같다.&lt;/p&gt;
+
+&lt;table class=&quot;math-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$\text{channel}$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$r_i$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$RSSI(node)$&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$ch_0$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.96$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$RSSI(n_3)$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$ch_1$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.56$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$RSSI(n_7)$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$ch_2$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.3$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$RSSI(n_9)$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;위의 $r_i$ 값을 바탕으로 작성한 low demand node의 $RSSI$와 $\text{channel}$은 아래 표와 같다.&lt;/p&gt;
+
+&lt;table class=&quot;math-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$\text{node}$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$RSSI$&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;$\text{channel}$&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$m_0$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$3.12$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$m_1$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.71$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$m_2$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1.33$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$1$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$m_3$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.43$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$2$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$m_4$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$0.2$&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$2$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;결과적으로 각 채널에 할당된 node($N+M$)들은 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;comment-box&quot;&gt;
+👉 $RSSI$ 값이 클수록 distance는 작다.
+&lt;/div&gt;
+
+&lt;table class=&quot;math-table&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+    &lt;th&gt;$\text{channel}$&lt;/th&gt;
+    &lt;th&gt;$\text{node}$ ($\text{RSSI}$ 내림차순)&lt;/th&gt;
+    &lt;th&gt;$\text{RSSI}$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style=&quot;text-align: center;&quot;&gt;
+&lt;tr&gt;
+    &lt;td rowspan=&quot;5&quot;&gt;$ch_0$&lt;/td&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_0$&lt;/td&gt;
+    &lt;td&gt;$3.6$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: blue;&quot;&gt;$m_0$&lt;/td&gt;
+    &lt;td&gt;$3.12$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_1$&lt;/td&gt;
+    &lt;td&gt;$3.0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_2$&lt;/td&gt;
+    &lt;td&gt;$2.0$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_3$&lt;/td&gt;
+    &lt;td&gt;$1.96$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td rowspan=&quot;6&quot;&gt;$ch_1$&lt;/td&gt;
+    &lt;td style=&quot;color: blue;&quot;&gt;$m_1$&lt;/td&gt;
+    &lt;td&gt;$1.71$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_4$&lt;/td&gt;
+    &lt;td&gt;$1.6$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_5$&lt;/td&gt;
+    &lt;td&gt;$1.5$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: blue;&quot;&gt;$m_2$&lt;/td&gt;
+    &lt;td&gt;$1.33$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_6$&lt;/td&gt;
+    &lt;td&gt;$0.87$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_7$&lt;/td&gt;
+    &lt;td&gt;$0.56$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td rowspan=&quot;4&quot;&gt;$ch_2$&lt;/td&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_8$&lt;/td&gt;
+    &lt;td&gt;$0.54$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: blue;&quot;&gt;$m_3$&lt;/td&gt;
+    &lt;td&gt;$0.43$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: red;&quot;&gt;$n_9$&lt;/td&gt;
+    &lt;td&gt;$0.3$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td style=&quot;color: blue;&quot;&gt;$m_4$&lt;/td&gt;
+    &lt;td&gt;$0.2$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;carrier-sense-threshold-assignment&quot;&gt;Carrier Sense Threshold Assignment&lt;/h4&gt;
+&lt;p&gt;이제 grouping 된 node를 바탕으로 $\text{path loss model}$을 이용해 각 channel의 carrier sense threshold를 추정한다.&lt;/p&gt;
+
+&lt;p&gt;이때 기준은 각 group에서 $RSSI$가 가장 작은 node(distance가 가장 먼) node를 기준으로 $\text{CST}$ 를 추정한다. ( $r_i$를 가지는 $\text{high demand node}$ )&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><summary type="html">Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가</summary></entry><entry><title type="html">Apples</title><link href="/mye785c83.github.io/web%20programming/2018/08/21/apples.html" rel="alternate" type="text/html" title="Apples" /><published>2018-08-21T00:00:00+09:00</published><updated>2018-08-21T00:00:00+09:00</updated><id>/mye785c83.github.io/web%20programming/2018/08/21/apples</id><content type="html" xml:base="/mye785c83.github.io/web%20programming/2018/08/21/apples.html">&lt;p&gt;An apple is a sweet, edible fruit produced by an apple tree.&lt;/p&gt;
 
 &lt;p&gt;Apple trees are cultivated worldwide, and are the most widely grown species in
 the genus Malus. The tree originated in Central Asia, where its wild ancestor,
 Malus sieversii, is still found today. Apples have been grown for thousands of
 years in Asia and Europe, and were brought to North America by European
-colonists.&lt;/p&gt;</content><author><name>jill</name></author><category term="Web Programming" /><summary type="html">An apple is a sweet, edible fruit produced by an apple tree.</summary></entry><entry><title type="html">Bananas2</title><link href="/as818/2018/08/20/bananas2.html" rel="alternate" type="text/html" title="Bananas2" /><published>2018-08-20T00:00:00+09:00</published><updated>2018-08-20T00:00:00+09:00</updated><id>/as818/2018/08/20/bananas2</id><content type="html" xml:base="/as818/2018/08/20/bananas2.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
-
-&lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.&lt;/p&gt;</content><author><name>jill</name></author><category term="AS818" /><summary type="html">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</summary></entry></feed>
+colonists.&lt;/p&gt;</content><author><name>jill</name></author><category term="Web Programming" /><summary type="html">An apple is a sweet, edible fruit produced by an apple tree.</summary></entry></feed>
