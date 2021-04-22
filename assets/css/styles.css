@@ -28,27 +28,40 @@ li {
     border-bottom: 1px solid #000;
 }
 
-.row {
-    height: 100% !important;
-    margin: 0 !important;
-}
-
-.row>*{
-    padding: 0 !important;
-}
-
 .h-md-100 {
     position:fixed;
     height: 100%;
     padding: 0 2rem;
     z-index: 2;
+    width: 30%;
+}
+
+/* .w-md-100{
+    width: 100%;
+} */
+
+.content-box{
+    margin-left: 30%;
 }
 
 @media (max-width: 767.9px) {
     .h-md-100{
+        position: relative;
         height: auto !important;
         width: 100%;
+        margin-bottom: 10%;
     }
+
+    .content-box{
+        margin-left: 0;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .content-box .container, .content-box .container .px-5{
+        padding: 0.3rem !important;
+    }
+
 }
 
 nav {

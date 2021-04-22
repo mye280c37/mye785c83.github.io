@@ -4,14 +4,10 @@
   {% include head.html %}
 
   <body style="background-color: #efefef; height: 100% !important;">
-    <div class="row">
-      <div class="col-md-3">
-        {% include navigation.html %}
-      </div>
-      <div class="col-md-9">
-        <div class="container-fluid p-5">
-          {{ content }}
-        </div>
+    {% include navigation.html %}
+    <div class="content-box">
+      <div class="container p-5">
+        {{ content }}
       </div>
     </div>
   </body>

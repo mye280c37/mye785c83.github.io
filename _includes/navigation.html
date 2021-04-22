@@ -1,5 +1,5 @@
 <div class="bg-785c83 h-md-100">
-  <div class="masthead">
+  <div class="masthead w-100">
     <h1 class="h1">mye785c83</h1> 
     <a href="{{ site.github.url }}">
         <span style="color: rgb(233, 219, 140);">
@@ -7,7 +7,7 @@
         </span>
     </a>
   </div>
-  <nav class="bg-785c83 mt-5 pb-2">
+  <nav class="mt-5 pb-2">
         {% for item in site.data.navigation %}
           <div class="nav-item w-100 text-center">
             <a class="nav-link active" aria-current="page" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
