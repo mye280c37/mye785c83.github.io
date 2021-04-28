@@ -2,19 +2,18 @@
 layout: default
 title: mye785c83
 ---
-<div class="px-5 mx-3">
-    <h3 class="h3 mb-5">Latest Posts</h3>
-    <div class="pl-3">
-        <ul>
-        {% assign count=0 %}
-            {% for post in site.posts %}
-            {% if count<3 %}
-            <li>
-                <h5 class="h5"><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
-            </li>
-            {% endif %}
-            {% assign count=count|plus:1 %}
-        {% endfor %}
-        </ul>
-    </div>
+
+<h3 class="h3 mb-5">Latest Posts</h3>
+<div class="pl-3">
+    <ul>
+    {% assign count=0 %}
+        {% for post in site.posts %}
+        {% if count<3 %}
+        <li>
+            <h5 class="h5"><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
+        </li>
+        {% endif %}
+        {% assign count=count|plus:1 %}
+    {% endfor %}
+    </ul>
 </div>
