@@ -12,7 +12,7 @@ layout: default
     {% assign category = page.category | default: page.title %}
     {% for post in site.categories[category] %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}" class="post-title">
+            <a href="{{ post.url }}" class="post-title">
             {{ post.title }}
             </a>
             <span class="text-muted small post-date">----- ({{ post.date | date_to_string }})</span>

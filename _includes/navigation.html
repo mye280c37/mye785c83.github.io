@@ -8,9 +8,6 @@
     </a>
   </div>
   <nav class="mt-5 pb-2">
-        <div class="nav-item w-100 text-center">
-          <a class="nav-link active" aria-current="page" href="/About/" {% if page.url == item.link %}class="current"{% endif %}>About</a>
-        </div>
         {% for tab in site.tabs %}
           <div class="nav-item w-100 text-center">
             <a class="nav-link active" aria-current="page" href="{{ tab.url }}" {% if page.url == item.link %}class="current"{% endif %}>{{ tab.title }}</a>
