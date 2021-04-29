@@ -3,18 +3,18 @@ layout: default
 title: Blog
 ---
 
-<div class="px-5 mx-3">
+<div class="px-3">
 {% for category in site.data.categories%}
   <div class="card p-4 mb-5">
-    <h2 class="h2 mb-4">
+    <h3 class="h3 mb-4">
       {{ category.name }}
       <div class="underline-box"></div>
-    </h2>
+    </h3>
     <ul>
     {% for post in site.posts %}
     {% if post.category == category.name %}
       <li>
-        <h5><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
+        <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
       </li>
     {% endif %}
     {% endfor %}

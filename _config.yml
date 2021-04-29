@@ -6,12 +6,17 @@ github:
   username: mye785C83
   url: 'https://github.com/mye785C83'
 
-# baseurl: '/mye785c83.github.io'
+baseurl: '/mye785c83.github.io'
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
   - scope:
@@ -19,10 +24,19 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      permalink: /posts/:title/
+      toc: true         # Display TOC column in posts.
   - scope:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "tabs"             # see `site.collections`
+    values:
+      layout: "default"
+      permalink: /:title/
+      dynamic_title: true    # Hide title in mobile screens.
 
 exclude:
   - vendor

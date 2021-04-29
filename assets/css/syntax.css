@@ -1,0 +1,142 @@
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2 !important;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822 !important;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .cs {
+  color: #75715e !important;
+}
+.highlight .c1 {
+  color: #c5b364 !important;
+}
+.highlight .cp {
+  color: #f4bf75 !important;
+}
+.highlight .n {
+  color: #a4dbb5 !important;
+}
+.highlight .nt {
+  color: #f4bf75 !important;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2 !important;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2 !important;
+}
+.highlight .gi {
+  color: #a6e22e !important;
+}
+.highlight .gd {
+  color: #f92672 !important;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822 !important;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff !important;
+}
+.highlight .kc {
+  color: #fd971f !important;
+}
+.highlight .kt {
+  color: #fd971f !important;
+}
+.highlight .kd {
+  color: #fd971f !important;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #88b42f !important;
+}
+.highlight .sa {
+  color: #ae81ff !important;
+}
+.highlight .sr {
+  color: #a1efe4 !important;
+}
+.highlight .si {
+  color: #cc6633 !important;
+}
+.highlight .se {
+  color: #cc6633 !important;
+}
+.highlight .nn {
+  color: #f4bf75 !important;
+}
+.highlight .nc {
+  color: #f4bf75 !important;
+}
+.highlight .no {
+  color: #f4bf75 !important;
+}
+.highlight .na {
+  color: #66d9ef !important;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #a6e22e !important;
+}
+.highlight .ss {
+  color: #a6e22e !important;
+}
+
+.highlight, pre.highlight {
+  font-family: D2Coding, 'D2 coding', "Consolas", monospace;
+  background: #222222;
+  color: #aab1bf !important;
+  border-radius: 5px;
+}
+
+pre {
+  border-top: 2px solid #ededed;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 3rem !important;
+  padding: 30px 30px 30px 40px;
+  position: relative;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre:before {
+  content: "\f121";
+  font-family: 'Font Awesome 5 Free' !important;
+  font-size: 18px;
+  color: #ededed;
+  font-weight: 900;
+  line-height: 1;
+  right: 5px;
+  position: absolute;
+  padding: 6px 5px 7px;
+  speak: none;
+  text-transform: none;
+  top: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+pre code {
+  padding: 0;
+  font-size: 0.9rem !important;
+  color: inherit !important;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+code {
+  font-size: .875em;
+  color: #bf118f !important;
+  word-wrap: break-word;
+  background-color: #e5ddddee;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
