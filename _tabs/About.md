@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-order: 0
+order: 1
 ---
 # About
 
