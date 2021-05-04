@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-05-01T17:44:07+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-05-04T10:22:57+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
 [input]
 ----------------------------------------------------------------
@@ -43,39 +43,94 @@ SET_CHANNEL,
     &lt;span class=&quot;n&quot;&gt;param_export_latex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;param_margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;mobile-node-deployment&quot;&gt;Mobile Node Deployment&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;기존-base-simulator-logic&quot;&gt;기존 base simulator logic&lt;/h2&gt;
+&lt;h3 id=&quot;skewed-deployment&quot;&gt;Skewed Deployment&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;channel 할당&lt;/p&gt;
+&lt;p&gt;AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 분포하는 것&lt;/p&gt;
 
-    &lt;p&gt;mobile node index를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_num_channels&lt;/code&gt; 로 나눈 나머지&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;cst 설정&lt;/p&gt;
+&lt;p&gt;⇒ high demand node의 발생이 불규칙적이고 예측할 수 없을 때 특정 distance에 demand가 과도하게 발생한다면 논문에서 제시한 방법이 비효율적일 수 있다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_cs_thresh&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_margin&lt;/code&gt; 으로 모든 채널이 동일&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;div class=&quot;comment-box&quot;&gt;
+&lt;strong&gt;WHY?&lt;/strong&gt;&lt;br /&gt;  
+&lt;p style=&quot;padding-left: 10px; margin-top: 1rem&quot;&gt;
+한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문
+&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;distance에-따른-node-grouping&quot;&gt;distance에 따른 node grouping&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-channel-and-cst&quot;&gt;Setting channel and CST&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;기존-base-simulator-logic&quot;&gt;기존 base simulator logic&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;channel 할당
     &lt;ul&gt;
-      &lt;li&gt;각 channel은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_num_channels&lt;/code&gt;/`param_&lt;/li&gt;
+      &lt;li&gt;mobile node index를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_num_channels&lt;/code&gt; 로 나눈 나머지&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;cst 설정&lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_cs_thresh&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_margin&lt;/code&gt; 으로 모든 채널이 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h2&gt;
+&lt;h3 id=&quot;distance에-따른-node-grouping&quot;&gt;distance에 따른 node grouping&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;channel 할당&lt;/li&gt;
-  &lt;li&gt;cst 설정&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs (작성중)" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;각 channel은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int(param_num_nodes / param_num_channels)&lt;/code&gt; 만큼의 node를 할당받는다&lt;/li&gt;
+      &lt;li&gt;node는 associated AP와의 distance 값이 작은 순서대로 channel index 0부터 차례대로 channel 할당을 받는다
+        &lt;ul&gt;
+          &lt;li&gt;channel index가 가장 작은 channel( $ch[0]$ )에 할당된 node들의 distance가 가장 작다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;channel에 할당된 node들 중 distance값이 가장 큰 node 기준&lt;/li&gt;
+      &lt;li&gt;해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;각 node는 associated AP와의 distance가 작은 순서대로 channel index 0부터 차례로 channel 할당을 받는다.&lt;/li&gt;
+      &lt;li&gt;channel에 할당된 node의 dist중 가장 작은 dist( &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;min_dist&lt;/code&gt; )를 기준으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist_threshold&lt;/code&gt;를 정해 해당 할당 받는 node의 distance가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;min_dist + dist_threshold&lt;/code&gt; 보다 클 경우 channel index를 1 늘린다.&lt;/li&gt;
+      &lt;li&gt;할당된 node 개수를 비율만큼 channel bandwidth를 할당한다.
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;[simulator 상에서 구현]&lt;/p&gt;
+
+            &lt;p&gt;simulator는 1 time마다 각 channel을 돌면서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tx_vector&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rx_vector&lt;/code&gt; 를 구한다.&lt;/p&gt;
+
+            &lt;p&gt;실제로 네트워크 상에서 bandwidth가 커지면 packet 전송 속도가 빨라지기 때문에 1 time당 더 많은 packet이 오갈 수 있다.&lt;/p&gt;
+
+            &lt;p&gt;simulator 상에서는 bandwidth에 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rx_vector&lt;/code&gt; 에 weight를 주어 속도를 주었다.&lt;/p&gt;
+
+            &lt;p&gt;( » &lt;em&gt;weight: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int(param_num_nodes / param_num_channels)&lt;/code&gt; 와의 비율&lt;/em&gt; )&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;channel에 할당된 node들 중 distance값이 가장 큰 node 기준&lt;/li&gt;
+      &lt;li&gt;해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;density 증가로 인해&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;DCF의 unfair share of bandwidth among nodes issue&lt;/li&gt;

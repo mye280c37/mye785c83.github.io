@@ -3,11 +3,13 @@
 
   {% include head.html %}
 
-  <body style="background-color: #efefef; height: 100% !important;">
+  <body style="background-color: #efefef; height: 100% !important;"
+    oncopy="return false" oncut="return false" onpaste="return false"
+  >
 
     {% include navigation.html %}
     
-    <div class="content-box">
+    <div class="content-box stop-dragging">
       <div class="container p-5">
         <div class="px-5 mx-3">
           {{ content }}

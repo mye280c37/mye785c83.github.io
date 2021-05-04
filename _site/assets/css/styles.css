@@ -51,7 +51,9 @@
     
 </head>
 
-  <body style="background-color: #efefef; height: 100% !important;">
+  <body style="background-color: #efefef; height: 100% !important;"
+    oncopy="return false" oncut="return false" onpaste="return false"
+  >
 
     <div class="bg-785c83 h-lg-100">
   <div class="masthead w-100">
@@ -79,7 +81,7 @@
   </nav>
 </div>
     
-    <div class="content-box">
+    <div class="content-box stop-dragging">
       <div class="container p-5">
         <div class="px-5 mx-3">
           html, body {
@@ -157,6 +159,15 @@ nav {
 
 div {
     font-family: 'Noto Sans KR', sans-serif;
+}
+
+div.stop-dragging
+{
+  -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 ul a, ul a:hover, .post-nav div a, h5 a {

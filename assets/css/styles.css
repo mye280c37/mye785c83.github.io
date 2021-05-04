@@ -78,6 +78,15 @@ div {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+div.stop-dragging
+{
+  -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 ul a, ul a:hover, .post-nav div a, h5 a {
     color: black !important;
     text-decoration: none;

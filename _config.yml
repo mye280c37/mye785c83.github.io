@@ -15,7 +15,7 @@ plugins:
   - jekyll-seo-tag
 
 collections:
-  tabs:
+  categories:
     output: true
     sort_by: order
 
@@ -33,7 +33,7 @@ defaults:
       layout: "default"
   - scope:
       path: ""
-      type: "tabs"             # see `site.collections`
+      type: "categories"             # see `site.collections`
     values:
       layout: "default"
       permalink: /:title/
