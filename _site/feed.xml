@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-05-04T10:22:57+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-05-12T11:40:13+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
 [input]
 ----------------------------------------------------------------
@@ -43,10 +43,14 @@ SET_CHANNEL,
     &lt;span class=&quot;n&quot;&gt;param_export_latex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;param_margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;mobile-node-deployment&quot;&gt;Mobile Node Deployment&lt;/h2&gt;
+
+&lt;h2 id=&quot;1차&quot;&gt;1차&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mobile-node-deployment&quot;&gt;Mobile Node Deployment&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;skewed-deployment&quot;&gt;Skewed Deployment&lt;/h3&gt;
+&lt;h4 id=&quot;skewed-deployment&quot;&gt;Skewed Deployment&lt;/h4&gt;
 
 &lt;p&gt;AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 분포하는 것&lt;/p&gt;
 
@@ -61,10 +65,10 @@ SET_CHANNEL,
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;setting-channel-and-cst&quot;&gt;Setting channel and CST&lt;/h2&gt;
+&lt;h3 id=&quot;setting-channel-and-cst&quot;&gt;Setting channel and CST&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;기존-base-simulator-logic&quot;&gt;기존 base simulator logic&lt;/h3&gt;
+&lt;h4 id=&quot;type1-기존-base-simulator-logic&quot;&gt;type1. 기존 base simulator logic&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;channel 할당
@@ -79,7 +83,7 @@ SET_CHANNEL,
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;distance에-따른-node-grouping&quot;&gt;distance에 따른 node grouping&lt;/h3&gt;
+&lt;h4 id=&quot;type2-distance에-따른-node-grouping&quot;&gt;type2. distance에 따른 node grouping&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;channel 할당
@@ -100,7 +104,7 @@ SET_CHANNEL,
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h3&gt;
+&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;channel 할당
@@ -128,6 +132,95 @@ SET_CHANNEL,
     &lt;ul&gt;
       &lt;li&gt;channel에 할당된 node들 중 distance값이 가장 큰 node 기준&lt;/li&gt;
       &lt;li&gt;해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stat_rx_packets_ms&lt;/code&gt; 카운트
+    &lt;ul&gt;
+      &lt;li&gt;매 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;t&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch&lt;/code&gt;에 따른 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rx_vector * ch_weight[ch]&lt;/code&gt;를 더함&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;결과-분석&quot;&gt;결과 분석&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;random하게 분포된 node에서 $\text{type1}$과 $\text{type2}$의 throughput을 비교해보면 $\text{type2}$가 $1.25$ 배 가량 향상된 것을 확인할 수 있었다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span style=&quot;color: red;&quot;&gt;&lt;em&gt;실제 논문에서는 2배 가량 차이나는데 어떤 차이일지?&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;skewed deployment에서 $\text{type2}$과 $\text{type3}$의 channel 별 throughput과 전체 throughput을 비교하면
+    &lt;ul&gt;
+      &lt;li&gt;전체 throughput의 경우 거의 비슷하다(약간의 감소)&lt;/li&gt;
+      &lt;li&gt;channel별 throughput을 비교해보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt; 즉, bandwidth에 따라 설정된 $weight$ 가 크면 커지고 작으면 작아진다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2번-결과에-대한-분석&quot;&gt;&amp;lt;2번 결과에 대한 분석&amp;gt;&lt;/h5&gt;
+
+&lt;p&gt;bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서&lt;span style=&quot;color: red;&quot;&gt;‘&lt;strong&gt;만&lt;/strong&gt;’&lt;/span&gt; $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2번-결과에-대한-대안&quot;&gt;&amp;lt;2번 결과에 대한 대안&amp;gt;&lt;/h5&gt;
+
+&lt;p&gt;실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2차&quot;&gt;2차&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$\text{type1}$, $\text{type2}$에 대한 setting은 유지&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정-1&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeslot_per_tx&lt;/code&gt; 설정
+    &lt;ul&gt;
+      &lt;li&gt;기존의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX&lt;/code&gt;로 고정되어 있던 time slot 크기를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX * ch_weight[ch]&lt;/code&gt;로 변경
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;기대 결과&lt;/p&gt;
+
+            &lt;p&gt;늘어난 timeslot만큼 $\text{tx_packet}$ 의 수가 늘어날 것으로 예상&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;실제 결과&lt;/p&gt;
+
+            &lt;p&gt;실제로 $\text{type2}$와 결과를 비교해보면 $\text{tx_packet}$의 수는 줄어들고, $\text{lost_packet}$의 수는 거의 비슷해 결론적으로 $\text{total throughput}$이 줄어드는 것을 확인할 수 있었다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;결과 분석&lt;/p&gt;
+
+            &lt;p&gt;각 채널에 할당된 cst를 확인해보면 미세하게 $\text{type3}$의 cst가 모두 작은 것을 확인할 수 있다.&lt;/p&gt;
+
+            &lt;p&gt;cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 skewed deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.&lt;/p&gt;
+
+            &lt;p&gt;channel 별 throughput을 비교하면 모든 채널의 throughput이 감소하는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1 이하인 channel의 경우, timeslot이 감소해서인 것 같다.&lt;/p&gt;
+
+            &lt;p&gt;다만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1보다 큰 경우에도 channel throughput이 감소하는데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;에 의해 늘어난 timeslot의 이득보다 node 개수가 많아지면서 증가한 간섭에 의한 손실이 더 커서인 것으로 예상된다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
@@ -410,7 +503,10 @@ $$&lt;/p&gt;
 
 &lt;p&gt;각 group에서 $RSSI$가 가장 작은 node(distance가 가장 먼) node를 기준으로 $\text{CST}$ 를 추정한다. ( $r_i$를 가지는 $\text{high demand node}$ )&lt;/p&gt;
 
-&lt;p&gt;가장 멀리 있는 node( $RSSI$가 가장 작은 node, $\text{node S}$ )가 AP에 packet을 전송했을 때 AP가 이를 성공적으로 수신하기 위해서는 $\text{rx_power}$(packet이 AP에 도착했을 때 전력 크기, recieved power, $P_S$)와 이때 같이 존재하는 noise(잡음, $P_I$)의 비율이 $\text{SNR threshold}$보다 작아야 한다.&lt;/p&gt;
+&lt;p&gt;가장 멀리 있는 node( $RSSI$가 가장 작은 node, $\text{node S}$ )가 AP에 packet을 전송했을 때 AP가 이를 성공적으로 수신하기 위해서는 $\text{rx_power}$(packet이 AP에 도착했을 때 전력 크기, recieved power, $P_S$)와 이때 같이 존재하는 noise(잡음, $P_I$)의 $\text{snr_db}=P_S-P_I\text{ [dB]}$ 이 $\text{SNR threshold}$보다 크거나 같아야 한다.
+$$
+\text{snr_db}=P_S-P_I\text{ [dB]} \geq \text{SNR threshold}
+$$&lt;/p&gt;
 
 &lt;p&gt;하지만 DSC(Dynamic Sensitivity Control)에서 packet을 보낼지 말지 결정하는 쪽은 sender이므로 AP에 도달하는 $P_N$이 sender(node)에게는 어떤 크기($P_{CS}$)로 도달하는지 알아야 한다.&lt;/p&gt;
 
@@ -435,7 +531,7 @@ $$&lt;/p&gt;
  $$
  P_I=P_S-SNR_{TH}
  $$
- $P_I$의 크기는 AP가 받는 전력 $P_S$가 성공적으로 decoding 되기 위해서 $P_S$와의 비율이 $SNR_{TH}$보다 커져서는 안된다. $P_I$를 $P_S$가 감당할 수 있는 최대 noise라고 하자.&lt;/p&gt;
+ $P_I$의 크기는 AP가 받는 전력 $P_S$가 성공적으로 decoding 되기 위해서 $P_S-P_I$가 $SNR_{TH}$보다 커져야 한다. $P_I$를 $P_S$가 감당할 수 있는 최대 noise라고 하자.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;$d_I$ 구하기
@@ -444,7 +540,7 @@ $$&lt;/p&gt;
  $$
  $\text{log-distance path loss model}$을 이용해 $P_{CS}$를 구하기 위해서는 $P_I$의 전력이 AP에 감지될 때의 distance($d_I$) 값을 알아야 한다.&lt;/p&gt;
 
-    &lt;p&gt;$P_{CS}$는 $P_I$를 AP의 $\text{rx_power}$로 만드는 임의의 node( $\text{node I}$ )가 packet을 전송했을 때 $\text{node S}$가 감지하는 power이다. 따라서 이를 구하기 위해 $\text{node S}$와 $\text{node I}$의 distance를 ( $d_I+d_S$, $d_S$는 $\text{node S}$와 AP의 distance ) 구해야한다.&lt;/p&gt;
+    &lt;p&gt;$P_{CS}$는 $P_I$의 도착 power를 AP의 $\text{rx_power}$로 만드는 임의의 node( $\text{node I}$ )가 packet을 전송했을 때 $\text{node S}$가 감지하는 power이다. 따라서 이를 구하기 위해 $\text{node S}$와 $\text{node I}$의 distance를 ( $d_I+d_S$, $d_S$는 $\text{node S}$와 AP의 distance ) 구해야한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;$P_{CS}$ 구하기

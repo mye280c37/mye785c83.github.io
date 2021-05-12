@@ -165,10 +165,14 @@ SET_CHANNEL,
     <span class="n">param_export_latex</span> <span class="o">=</span> <span class="n">LATEX</span>
     <span class="n">param_margin</span> <span class="o">=</span> <span class="n">MARGIN</span>
 </code></pre></div></div>
-<h2 id="mobile-node-deployment">Mobile Node Deployment</h2>
+
+<h2 id="1차">1차</h2>
+<p><br /><br /></p>
+
+<h3 id="mobile-node-deployment">Mobile Node Deployment</h3>
 <p><br /></p>
 
-<h3 id="skewed-deployment">Skewed Deployment</h3>
+<h4 id="skewed-deployment">Skewed Deployment</h4>
 
 <p>AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 분포하는 것</p>
 
@@ -183,10 +187,10 @@ SET_CHANNEL,
 
 <p><br /><br /></p>
 
-<h2 id="setting-channel-and-cst">Setting channel and CST</h2>
+<h3 id="setting-channel-and-cst">Setting channel and CST</h3>
 <p><br /></p>
 
-<h3 id="기존-base-simulator-logic">기존 base simulator logic</h3>
+<h4 id="type1-기존-base-simulator-logic">type1. 기존 base simulator logic</h4>
 
 <ol>
   <li>channel 할당
@@ -201,7 +205,7 @@ SET_CHANNEL,
   </li>
 </ol>
 
-<h3 id="distance에-따른-node-grouping">distance에 따른 node grouping</h3>
+<h4 id="type2-distance에-따른-node-grouping">type2. distance에 따른 node grouping</h4>
 
 <ol>
   <li>channel 할당
@@ -222,7 +226,7 @@ SET_CHANNEL,
   </li>
 </ol>
 
-<h3 id="channel에-할당된-node-개수에-따른-channel-bandwidth-설정">channel에 할당된 node 개수에 따른 channel bandwidth 설정</h3>
+<h4 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h4>
 
 <ol>
   <li>channel 할당
@@ -250,6 +254,95 @@ SET_CHANNEL,
     <ul>
       <li>channel에 할당된 node들 중 distance값이 가장 큰 node 기준</li>
       <li>해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">stat_rx_packets_ms</code> 카운트
+    <ul>
+      <li>매 <code class="language-plaintext highlighter-rouge">t</code>, <code class="language-plaintext highlighter-rouge">ch</code>에 따른 <code class="language-plaintext highlighter-rouge">rx_vector * ch_weight[ch]</code>를 더함</li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="결과-분석">결과 분석</h3>
+
+<ol>
+  <li>random하게 분포된 node에서 $\text{type1}$과 $\text{type2}$의 throughput을 비교해보면 $\text{type2}$가 $1.25$ 배 가량 향상된 것을 확인할 수 있었다.
+    <ul>
+      <li><span style="color: red;"><em>실제 논문에서는 2배 가량 차이나는데 어떤 차이일지?</em></span></li>
+    </ul>
+  </li>
+  <li>skewed deployment에서 $\text{type2}$과 $\text{type3}$의 channel 별 throughput과 전체 throughput을 비교하면
+    <ul>
+      <li>전체 throughput의 경우 거의 비슷하다(약간의 감소)</li>
+      <li>channel별 throughput을 비교해보면 <code class="language-plaintext highlighter-rouge">ch_weight</code> 즉, bandwidth에 따라 설정된 $weight$ 가 크면 커지고 작으면 작아진다.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h5 id="2번-결과에-대한-분석">&lt;2번 결과에 대한 분석&gt;</h5>
+
+<p>bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서<span style="color: red;">‘<strong>만</strong>’</span> $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.</p>
+
+<p><br /></p>
+
+<h5 id="2번-결과에-대한-대안">&lt;2번 결과에 대한 대안&gt;</h5>
+
+<p>실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.</p>
+
+<p><br /><br /></p>
+
+<h2 id="2차">2차</h2>
+<p><br /></p>
+
+<p>$\text{type1}$, $\text{type2}$에 대한 setting은 유지</p>
+
+<p><br /></p>
+
+<h4 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정-1">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h4>
+
+<ol>
+  <li>channel 할당
+    <ul>
+      <li>1차와 동일</li>
+    </ul>
+  </li>
+  <li>cst 설정
+    <ul>
+      <li>1차와 동일</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">timeslot_per_tx</code> 설정
+    <ul>
+      <li>기존의 <code class="language-plaintext highlighter-rouge">TIMESLOTS_PER_TX</code>로 고정되어 있던 time slot 크기를 <code class="language-plaintext highlighter-rouge">TIMESLOTS_PER_TX * ch_weight[ch]</code>로 변경
+        <ul>
+          <li>
+            <p>기대 결과</p>
+
+            <p>늘어난 timeslot만큼 $\text{tx_packet}$ 의 수가 늘어날 것으로 예상</p>
+          </li>
+          <li>
+            <p>실제 결과</p>
+
+            <p>실제로 $\text{type2}$와 결과를 비교해보면 $\text{tx_packet}$의 수는 줄어들고, $\text{lost_packet}$의 수는 거의 비슷해 결론적으로 $\text{total throughput}$이 줄어드는 것을 확인할 수 있었다.</p>
+          </li>
+          <li>
+            <p>결과 분석</p>
+
+            <p>각 채널에 할당된 cst를 확인해보면 미세하게 $\text{type3}$의 cst가 모두 작은 것을 확인할 수 있다.</p>
+
+            <p>cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 skewed deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.</p>
+
+            <p>channel 별 throughput을 비교하면 모든 채널의 throughput이 감소하는데 <code class="language-plaintext highlighter-rouge">ch_weight</code>가 1 이하인 channel의 경우, timeslot이 감소해서인 것 같다.</p>
+
+            <p>다만, <code class="language-plaintext highlighter-rouge">ch_weight</code>가 1보다 큰 경우에도 channel throughput이 감소하는데 이는 <code class="language-plaintext highlighter-rouge">ch_weight</code>에 의해 늘어난 timeslot의 이득보다 node 개수가 많아지면서 증가한 간섭에 의한 손실이 더 커서인 것으로 예상된다.</p>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ol>
