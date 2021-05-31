@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
 
-    <link type="application/atom+xml" rel="alternate" href="/mye785c83.github.io/feed.xml" title="mye785C83" />
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="mye785C83" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="mye785c83" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="mye785c83" />
 <script type="application/ld+json">
-{"@type":"WebSite","name":"mye785C83","url":"/mye785c83.github.io/","author":{"@type":"Person","name":"mye785C83"},"headline":"mye785c83","@context":"https://schema.org"}</script>
+{"@type":"WebSite","name":"mye785C83","url":"/","author":{"@type":"Person","name":"mye785C83"},"headline":"mye785c83","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -47,6 +47,9 @@
     <!-- Bootstrap -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     
 </head>
@@ -88,40 +91,121 @@
     Latest Posts
     <div class="underline-box"></div>
 </h2>
-<div class="pl-3">
+<div class="mb-4">
     
+    <span class="tag m-1 type-btn" data-tag="paper">
+        <!--  -->
+        paper
+    </span>
+    
+    <span class="tag m-1 type-btn" data-tag="python">
+        <!--  -->
+        python
+    </span>
+    
+    <span class="tag m-1 type-btn" data-tag="matpolib">
+        <!--  -->
+        matpolib
+    </span>
+    
+</div>
+<!-- <div class="text-right type-btn" id="unset-all-tags">
+    해제
+</div> -->
+<div class="pl-3">
+    <!--  -->
         
-        
-        <div class="py-4 preview-box">
+        <!--  -->
+        <div class="py-4 preview-box" 
+            
+                
+                    data-python
+                
+            
+        >
             <h5 class="h5 mb-2"><a href="/posts/python_simulator/" class="post-title">python을 이용한 간단한 network simulation 구현</a></h5>
             <div class="post-category text-right me-4 mb-1">AS818</div>
-            variable setting
+            <div class="px-3">
+                variable setting
 ```python
 ‘’’
 [input]
 —————————————————————-
 NUM_GRID,       grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨
 AREA_SIZE,      한 grid 당 사이즈
-NUM_NODES,      mobile node 개수
-NUM_CH,         chann...               
+NU...            
+            </div>
+            
+            <div class="ms-2 mb-1 mt-4">
+                
+                    
+                    <span class="tag type-btn" data-tag="python">python</span>
+                    
+                
+            </div>
+            
         </div>
-        
-        
+        <!--  -->
+        <!--  -->
     
-        
-        <div class="py-4 preview-box">
+        <!--  -->
+        <div class="py-4 preview-box" 
+            
+                
+                    data-paper
+                
+            
+        >
             <h5 class="h5 mb-2"><a href="/posts/10.1155_2019_2149606/" class="post-title">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</a></h5>
             <div class="post-category text-right me-4 mb-1">AS818</div>
-            Problem
+            <div class="px-3">
+                Problem
 density 증가로 인해
 
   DCF의 unfair share of bandwidth among nodes issue
-  CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed term...               
+  CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이...            
+            </div>
+            
+            <div class="ms-2 mb-1 mt-4">
+                
+                    
+                    <span class="tag type-btn" data-tag="paper">paper</span>
+                    
+                
+            </div>
+            
         </div>
-        
-        
+        <!--  -->
+        <!--  -->
     
 </div>
+<script type="text/javascript">
+    $("[data-tag]").click((e) => {
+        currentTag = e.target.dataset.tag;
+        if($(`.tag[data-tag=${currentTag}]`).hasClass('selected')){
+            $('.hidden').removeClass('hidden');
+            $(`.tag`).removeClass('selected');
+        }else{
+            filterByTagName(currentTag);
+        }
+    })
+
+    function filterByTagName(tagName) {
+        $('.hidden').removeClass('hidden');
+        $('.preview-box').each((index, elem) => {
+            if (!elem.hasAttribute(`data-${tagName}`)) {
+            $(elem).addClass('hidden');
+            }
+        });
+        $(`.tag`).removeClass('selected');
+        $(`.tag[data-tag=${tagName}]`).addClass('selected');
+    }
+
+    $('#unset-all-tags').click((e) => {
+        $('.hidden').removeClass('hidden');
+        $(`.tag`).removeClass('selected');
+    })
+</script>
         </div>
       </div>
     </div>

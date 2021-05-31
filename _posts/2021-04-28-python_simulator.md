@@ -2,6 +2,7 @@
 layout: post
 title : python을 이용한 간단한 network simulation 구현
 category: AS818
+tags: [python]
 use_math: true
 ---
 
