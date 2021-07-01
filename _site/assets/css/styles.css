@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
 
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="mye785C83" />
+    <link type="application/atom+xml" rel="alternate" href="/mye785c83.github.io/feed.xml" title="mye785C83" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="mye785C83" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="mye785C83" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"/assets/css/styles.css","author":{"@type":"Person","name":"mye785C83"},"headline":"mye785C83","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"/mye785c83.github.io/assets/css/styles.css","author":{"@type":"Person","name":"mye785C83"},"headline":"mye785C83","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -326,10 +326,11 @@ li {
 }
 
 .tag{
-    border: 1px solid #6b5f77;
+    border: 1px solid #220c38;
     border-radius: 20px;
     padding: 3px 8px;
-    color:#6b5f77;
+    color:#220c38;
+    font-size: 0.93rem;
 }
 
 .divider-box{
@@ -344,8 +345,8 @@ li {
 }
 
 .selected{
-    background-color: #6b5f77;
-    color:rgb(233, 218, 136);
+    background-color: #220c38;
+    color:rgb(183, 255, 88);
 }
 
 .type-btn:hover{
@@ -353,7 +354,7 @@ li {
 }
 
 .tag.type-btn:hover{
-    border: 2.3px solid #6b5f77;
+    border: 2.3px solid #220c38;
     font-weight: 500;
 }
         </div>
