@@ -7,10 +7,10 @@ layout: default
      <div class="text-right">{{ page.category }}</div>
      <div class="pb-5 text-right">{{ page.date | date_to_string }} - {{ page.author | default: 'mye785c83' }}</div>
      {% if page.tags %}
-     <div class="mb-3">
+     <div class="mb-3 d-flex flex-wrap">
          {% for tag in page.tags %}
             {% if site.data.tags contains tag %}
-            <span class="tag selected">{{ tag }}</span>
+            <span class="tag selected m-1">{{ tag }}</span>
             {% endif %}
          {% endfor %}
      </div>

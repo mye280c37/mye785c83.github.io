@@ -124,10 +124,10 @@
      <div class="text-right">AS818</div>
      <div class="pb-5 text-right">28 Apr 2021 - mye785c83</div>
      
-     <div class="mb-3">
+     <div class="mb-3 d-flex flex-wrap">
          
             
-            <span class="tag selected">python</span>
+            <span class="tag selected m-1">python</span>
             
          
      </div>
@@ -180,12 +180,10 @@ SET_CHANNEL,
 </code></pre></div></div>
 
 <h2 id="1차">1차</h2>
-<p><br /><br /></p>
 
 <h3 id="mobile-node-deployment">Mobile Node Deployment</h3>
-<p><br /></p>
 
-<h4 id="skewed-deployment">Skewed Deployment</h4>
+<h4 id="biased-deployment">Biased Deployment</h4>
 
 <p>AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 분포하는 것</p>
 
@@ -198,10 +196,7 @@ SET_CHANNEL,
 </p>
 </div>
 
-<p><br /><br /></p>
-
 <h3 id="setting-channel-and-cst">Setting channel and CST</h3>
-<p><br /></p>
 
 <h4 id="type1-기존-base-simulator-logic">type1. 기존 base simulator logic</h4>
 
@@ -276,8 +271,6 @@ SET_CHANNEL,
   </li>
 </ol>
 
-<p><br /></p>
-
 <h3 id="결과-분석">결과 분석</h3>
 
 <ol>
@@ -294,27 +287,18 @@ SET_CHANNEL,
   </li>
 </ol>
 
-<p><br /></p>
-
 <h5 id="2번-결과에-대한-분석">&lt;2번 결과에 대한 분석&gt;</h5>
 
 <p>bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서<span style="color: red;">‘<strong>만</strong>’</span> $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.</p>
-
-<p><br /></p>
 
 <h5 id="2번-결과에-대한-대안">&lt;2번 결과에 대한 대안&gt;</h5>
 
 <p>실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
 따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.</p>
 
-<p><br /><br /></p>
-
 <h2 id="2차">2차</h2>
-<p><br /></p>
 
 <p>$\text{type1}$, $\text{type2}$에 대한 setting은 유지</p>
-
-<p><br /></p>
 
 <h4 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정-1">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h4>
 

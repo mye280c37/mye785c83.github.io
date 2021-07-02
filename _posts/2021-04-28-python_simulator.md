@@ -54,12 +54,10 @@ def RunSim(NUM_GRID, NUM_NODES, NODES_PER_CELL, AREA_SIZE, NUM_CH, CS, PROTO, SE
 ```
 
 ## 1차
-<br><br>
 
 ### Mobile Node Deployment
-<br>
 
-#### Skewed Deployment
+#### Biased Deployment
 
 AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 분포하는 것
 
@@ -73,11 +71,7 @@ AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 
 </p>
 </div>
 
-<br><br>
-
-
 ### Setting channel and CST
-<br>
 
 #### type1. 기존 base simulator logic
 
@@ -120,7 +114,6 @@ AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 
 3. `stat_rx_packets_ms` 카운트
    * 매 `t`, `ch`에 따른 `rx_vector * ch_weight[ch]`를 더함
 
-<br>
 
 ### 결과 분석
 
@@ -131,27 +124,22 @@ AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 
    + 전체 throughput의 경우 거의 비슷하다(약간의 감소)
    +  channel별 throughput을 비교해보면 `ch_weight` 즉, bandwidth에 따라 설정된 $weight$ 가 크면 커지고 작으면 작아진다.
     
-<br>
 
 ##### <2번 결과에 대한 분석>  
 
 bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서<span style="color: red;">'**만**'</span> $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.
 
-<br>
 
 ##### <2번 결과에 대한 대안>
 
 실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
 따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.
 
-<br><br>
 
 ## 2차
-<br>
 
 $\text{type1}$, $\text{type2}$에 대한 setting은 유지
 
-<br>
 
 #### type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정
 

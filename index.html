@@ -29,16 +29,16 @@ title: mye785c83
                 {% endfor %}
             {% endif %}
         >
-            <h5 class="h5 mb-2"><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></h5>
+            <div class="h5 mb-2"><a href="{{ post.url }}" class="post-title">{{ post.title }}</a></div>
             <div class="post-category text-right me-4 mb-1">{{ post.categories[0] }}</div>
             <!-- <div class="px-3">
                 {{ post.excerpt | markdownify | strip_html | truncate: 50 }}            
             </div> -->
             {% if post.tags %}
-            <div class="ms-2 mb-1 mt-4">
+            <div class="ms-2 mb-1 mt-4 d-flex flex-wrap">
                 {% for tag in post.tags %}
                     {% if site.data.tags contains tag %}
-                    <span class="tag type-btn" data-tag="{{tag}}">{{ tag }}</span>
+                    <span class="tag type-btn m-1" data-tag="{{tag}}">{{ tag }}</span>
                     {% endif %}
                 {% endfor %}
             </div>
