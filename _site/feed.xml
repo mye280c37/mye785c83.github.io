@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-05-31T14:56:47+09:00</updated><id>/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/posts/python_simulator</id><content type="html" xml:base="/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-02T03:31:12+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h2 id=&quot;expressjs-mongodb-환경설정&quot;&gt;Express.js, MongoDB 환경설정&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;node-npm-설치&quot;&gt;node, npm 설치&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install nodejs
+sudo apt-get install npm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;원하는 npm version이 있다면&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install npm@[version] -g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;mongodb-설치&quot;&gt;MongoDB 설치&lt;/h4&gt;
+&lt;p&gt;다음 &lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/&quot;&gt;docs&lt;/a&gt;를 따라하면 어렵지 않게 설치후 실행가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl status mongod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 명령어를 통해 MongoDB가 잘 실행되는 것을 확인했으면 DataBase 보안을 위해 authorization을 추가해야한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database-설정&quot;&gt;DataBase 설정&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;admin-database-실행-후-root-관리자-생성&quot;&gt;admin database 실행 후, root 관리자 생성&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; use admin
+&amp;gt; db.createUser({ user: '이름', pwd: '비밀번호', roles: ['root']})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;mongodconf에서-authorization을-enabled로-설정&quot;&gt;mongod.conf에서 authorization을 enabled로 설정&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# mongod.conf
+
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+
+# ...
+
+security:
+  authorization: 'enabled'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;이때 들여쓰기 2칸 제대로 안했다가 conf error 난…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;mongod-service-재실행&quot;&gt;mongod service ‘재실행’&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service mongod restart
+sudo systemctl status mongod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;서버의-mongo-uri에-해당하는-database-및-user-pwd-생성&quot;&gt;서버의 MONGO URI에 해당하는 database 및 user, pwd 생성&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;MONGO URI는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env&lt;/code&gt; 파일에 설정되어 있다.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;나의 경우 admin database로 가 server database owner에 대한 role도 root user에 추가해주었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; db.updateUser(&quot;username&quot;, {roles:[{role: 'dbOwner', db: 'database name'}]})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;생성한-user-정보로-server-database-접속해보기&quot;&gt;생성한 user 정보로 server database 접속해보기&lt;/h5&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongo --port 27017 -u 사용자계정 -p '비밀번호' --authenticationDatabase '디비이름'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 database 설정까지 완료했으면 이제 Express.js 서버를 가져와 실행해준다. (database를 미리 한 이유는 안하면 서버를 먼저 가져와서 실행해봤자 database 접속 못 할거라)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;expressjs-실행&quot;&gt;Express.js 실행&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;packagejson-설치&quot;&gt;package.json 설치&lt;/h4&gt;
+&lt;p&gt;github에 존재하는 Express.js repository를 clone 해온 후 해당 폴더로 이동해 package.json에 해당하는 패키지들을 설치한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기까지 마치고 나면 해당 폴더의 하위에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules/&lt;/code&gt; 폴더가 생성된 것을 확인할 수 있다.
+여기까지 마치면 서버를 실행해 서버가 잘 실행되고 데이터베이스에 잘 연결되었는지 확인한다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><category term="Express.js" /><category term="MongoDB" /><category term="Node.js" /><category term="nginx" /><category term="pm2" /><summary type="html">Express.js, MongoDB 환경설정</summary></entry><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
 [input]
 ----------------------------------------------------------------
@@ -223,7 +314,7 @@ SET_CHANNEL,
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="python" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/posts/10.1155_2019_2149606</id><content type="html" xml:base="/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="python" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;density 증가로 인해&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;DCF의 unfair share of bandwidth among nodes issue&lt;/li&gt;
