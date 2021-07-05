@@ -8,11 +8,14 @@ tags: [AWS, EC2, ExpressJS, MongoDB, NodeJS, nginx, pm2]
 ## EC2 인스턴스 설정
 
 #### SSH port 변경
+<span class="text-highlight warning"> 일단 보류 </span>
 
 기본 SSH 포트는 22인데 이를 다른 포트로 변경해주는 것이 좋다.
 
 
 #### password authentication for SSH
+
+<span class="text-highlight warning"> 일단 보류: 굳이 밖에서 서버 접속할 일 없음 </span>
 
 ```
 sudo passwd `username`
@@ -22,6 +25,9 @@ EC2의 경우 `username=ubuntu`
 
 
 ##### sshd_conf file 업데이트
+
+<span class="text-highlight warning"> 일단 보류 </span>
+
 `/etc/ssh/sshd_config` 파일을 열어 `PasswordAuthentication` 값을 yes로 변경한다.
 
 ```
@@ -31,6 +37,7 @@ PasswordAuthentication yes
 ```
 
 #### SSH 재시작
+<span class="text-highlight warning"> 일단 보류 </span>
 
 ```
 sudo service ssh restart

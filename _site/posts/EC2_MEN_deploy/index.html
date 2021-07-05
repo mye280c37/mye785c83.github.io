@@ -136,10 +136,13 @@
      <div class="px-4"><h2 id="ec2-인스턴스-설정">EC2 인스턴스 설정</h2>
 
 <h4 id="ssh-port-변경">SSH port 변경</h4>
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
 
 <p>기본 SSH 포트는 22인데 이를 다른 포트로 변경해주는 것이 좋다.</p>
 
 <h4 id="password-authentication-for-ssh">password authentication for SSH</h4>
+
+<p><span class="text-highlight warning"> 일단 보류: 굳이 밖에서 서버 접속할 일 없음 </span></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd `username`
 </code></pre></div></div>
@@ -147,6 +150,9 @@
 <p>EC2의 경우 <code class="language-plaintext highlighter-rouge">username=ubuntu</code></p>
 
 <h5 id="sshd_conf-file-업데이트">sshd_conf file 업데이트</h5>
+
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
+
 <p><code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code> 파일을 열어 <code class="language-plaintext highlighter-rouge">PasswordAuthentication</code> 값을 yes로 변경한다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/ssh/sshd_config
@@ -155,6 +161,7 @@ PasswordAuthentication yes
 </code></pre></div></div>
 
 <h4 id="ssh-재시작">SSH 재시작</h4>
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service ssh restart
 </code></pre></div></div>

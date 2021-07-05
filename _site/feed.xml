@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-02T16:37:34+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h2 id=&quot;ec2-인스턴스-설정&quot;&gt;EC2 인스턴스 설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-06T01:41:37+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h2 id=&quot;ec2-인스턴스-설정&quot;&gt;EC2 인스턴스 설정&lt;/h2&gt;
 
 &lt;h4 id=&quot;ssh-port-변경&quot;&gt;SSH port 변경&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&quot;text-highlight warning&quot;&gt; 일단 보류 &lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;기본 SSH 포트는 22인데 이를 다른 포트로 변경해주는 것이 좋다.&lt;/p&gt;
 
 &lt;h4 id=&quot;password-authentication-for-ssh&quot;&gt;password authentication for SSH&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class=&quot;text-highlight warning&quot;&gt; 일단 보류: 굳이 밖에서 서버 접속할 일 없음 &lt;/span&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo passwd `username`
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -12,6 +15,9 @@
 &lt;p&gt;EC2의 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username=ubuntu&lt;/code&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;sshd_conf-file-업데이트&quot;&gt;sshd_conf file 업데이트&lt;/h5&gt;
+
+&lt;p&gt;&lt;span class=&quot;text-highlight warning&quot;&gt; 일단 보류 &lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/ssh/sshd_config&lt;/code&gt; 파일을 열어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PasswordAuthentication&lt;/code&gt; 값을 yes로 변경한다.&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# /etc/ssh/sshd_config
@@ -20,6 +26,7 @@ PasswordAuthentication yes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;ssh-재시작&quot;&gt;SSH 재시작&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&quot;text-highlight warning&quot;&gt; 일단 보류 &lt;/span&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service ssh restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
