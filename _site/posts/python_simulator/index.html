@@ -31,6 +31,8 @@
 
     <title>python을 이용한 간단한 network simulation 구현 | mye785C83
     </title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -130,6 +132,14 @@
             <span class="tag selected m-1">python</span>
             
          
+            
+            <span class="tag selected m-1">network</span>
+            
+         
+            
+            <span class="tag selected m-1">wirelessNetwork</span>
+            
+         
      </div>
      
      <div class="divider-box"></div>
@@ -189,12 +199,8 @@ SET_CHANNEL,
 
 <p>⇒ high demand node의 발생이 불규칙적이고 예측할 수 없을 때 특정 distance에 demand가 과도하게 발생한다면 논문에서 제시한 방법이 비효율적일 수 있다.</p>
 
-<div class="comment-box">
-<strong>WHY?</strong><br />  
-<p style="padding-left: 10px; margin-top: 1rem">
-한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문
-</p>
-</div>
+<p class="comment-box"><strong>WHY?</strong>
+한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문</p>
 
 <h3 id="setting-channel-and-cst">Setting channel and CST</h3>
 
@@ -294,7 +300,7 @@ SET_CHANNEL,
 <h5 id="2번-결과에-대한-대안">&lt;2번 결과에 대한 대안&gt;</h5>
 
 <p>실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
-따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.</p>
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.</p>
 
 <h2 id="2차">2차</h2>
 
@@ -355,6 +361,20 @@ SET_CHANNEL,
   <div class="mt-3 px-2">
       <ul>
         
+          
+            
+              
+                
+                <li><a href="/posts/background/">background 개념</a></li>
+                
+              
+            
+            
+          
+            
+              
+            
+            
           
             
               

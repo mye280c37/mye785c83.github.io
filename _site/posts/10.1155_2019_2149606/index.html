@@ -31,6 +31,8 @@
 
     <title>A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs | mye785C83
     </title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -130,6 +132,14 @@
             <span class="tag selected m-1">paper</span>
             
          
+            
+            <span class="tag selected m-1">network</span>
+            
+         
+            
+            <span class="tag selected m-1">wirelessNetwork</span>
+            
+         
      </div>
      
      <div class="divider-box"></div>
@@ -152,12 +162,10 @@
 
 <h3 id="main-idea">Main Idea</h3>
 <p>associated AP와 <strong>“distance”</strong>가 비슷한 node를 grouping &amp; assigning <span style="color:red">same</span> channel</p>
-<div class="comment-box">
-<p>
-👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록</p>
-👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 <strong>"received signal strength"</strong> 를 기반으로 측정한 distance이다
-</div>
-<p><br /></p>
+
+<p class="comment-box">👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록</p>
+
+<p class="comment-box">👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 <span class="warning text-highlight">received signal strength</span> 를 기반으로 측정한 distance이다</p>
 
 <h4 id="channel-assignment">Channel Assignment</h4>
 <p>$C$ orthogonal channels, $N$ high traffic node, $M$ low traffic node가 있다고 할 때</p>
@@ -480,6 +488,20 @@ $$</p>
   <div class="mt-3 px-2">
       <ul>
         
+          
+            
+              
+                
+                <li><a href="/posts/background/">background 개념</a></li>
+                
+              
+            
+            
+          
+            
+              
+            
+            
           
             
               

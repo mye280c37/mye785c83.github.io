@@ -3,45 +3,11 @@ layout: post
 title : AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정
 category: Web
 tags: [AWS, EC2, ExpressJS, MongoDB, NodeJS, nginx, pm2]
+complete: true
 ---
 
-## EC2 인스턴스 설정
-
-#### SSH port 변경
-<span class="text-highlight warning"> 일단 보류 </span>
-
-기본 SSH 포트는 22인데 이를 다른 포트로 변경해주는 것이 좋다.
-
-
-#### password authentication for SSH
-
-<span class="text-highlight warning"> 일단 보류: 굳이 밖에서 서버 접속할 일 없음 </span>
-
-```
-sudo passwd `username`
-```
-
-EC2의 경우 `username=ubuntu`
-
-
-##### sshd_conf file 업데이트
-
-<span class="text-highlight warning"> 일단 보류 </span>
-
-`/etc/ssh/sshd_config` 파일을 열어 `PasswordAuthentication` 값을 yes로 변경한다.
-
-```
-# /etc/ssh/sshd_config
-
-PasswordAuthentication yes
-```
-
-#### SSH 재시작
-<span class="text-highlight warning"> 일단 보류 </span>
-
-```
-sudo service ssh restart
-```
+##### 참고 사이트
+* [Deploying NodeJS, Express, MongoDB application on AWS EC2](https://chinmaypatil.medium.com/deploying-nodejs-express-mongodb-application-on-aws-ec2-e32a8e3ea8a1)
 
 
 ## Express.js, MongoDB 환경설정
@@ -126,7 +92,6 @@ sudo systemctl status mongod
 mongo --port 27017 -u 사용자계정 -p '비밀번호' --authenticationDatabase '디비이름'
 ```
 
-<br><br>
 
 이렇게 database 설정까지 완료했으면 이제 Express.js 서버를 가져와 실행해준다. (database를 미리 한 이유는 안하면 서버를 먼저 가져와서 실행해봤자 database 접속 못 할거라)
 
@@ -143,13 +108,11 @@ npm install
 여기까지 마치고 나면 해당 폴더의 하위에 `node_modules/` 폴더가 생성된 것을 확인할 수 있다.
 여기까지 마치면 서버를 실행해 서버가 잘 실행되고 데이터베이스에 잘 연결되었는지 확인한다.
 
-<div class="comment-box">
-<div class="title">포트 방화벽 해제</div>  
-<div class="body">
+
+**포트 방화벽 해제**
 외부에서 서버의 특정 포트에 접근하려면 해당 포트의 방화벽을 해제해야 한다. <br>
 <span class="warning text-highlight">어떤 포트를 왜 열어야 되는지 정확히 모르겠다</span>
-</div>
-</div>
+{: .comment-box}
 
 
 ## NGINX 설정
@@ -204,9 +167,8 @@ sduo systemctl status nginx
 
 ## PM2
 
-<div class="comment-box">
 원래는 구매한 도메인 SSL certificate 완료를 해서 해당 도메인을 서버에 씌우고 web server의 port를 443으로 변경하여 실행하였다. 근데 PM2에서 해당 서버를 실행하면 <span class="text-highlight warning">Error: listen EACCES 0.0.0.0:443</span> 다음과 같은 error가 떠서 서치해본 결과 pm2에서 http, https 포트로의 실행은 불가능했고 따라서 다시 기존처럼 서버 포트를 설정하고 nginx를 통해 http/https 요청이 서버 port로 넘어갈 수 있게 하고 pm2를 실행하였다.
-</div>
+{: .comment-box}
 
 #### ecosystem file 생성
 

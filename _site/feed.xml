@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-06T01:41:37+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h2 id=&quot;ec2-인스턴스-설정&quot;&gt;EC2 인스턴스 설정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-12T22:03:48+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">background 개념</title><link href="/mye785c83.github.io/posts/background/" rel="alternate" type="text/html" title="background 개념" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/background</id><content type="html" xml:base="/mye785c83.github.io/posts/background/">&lt;h2 id=&quot;fading&quot;&gt;fading&lt;/h2&gt;
+
+&lt;h4 id=&quot;type에-따른-fading-분류&quot;&gt;type에 따른 fading 분류&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ktword.co.kr/abbr_view.php?m_temp1=641&quot;&gt;Fading - 정보통신기술용어해설&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;csmaca&quot;&gt;CSMA/CA&lt;/h2&gt;
+
+&lt;h4 id=&quot;하나의-ap-or-mobile-station이-destination이-생겼을-경우&quot;&gt;하나의 AP (or mobile station)이 destination이 생겼을 경우&lt;/h4&gt;
+
+&lt;h4 id=&quot;downlink-하나의-channel에-대해&quot;&gt;(downlink): 하나의 channel에 대해&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">fading</summary></entry><entry><title type="html">EC2 보안강화하기</title><link href="/mye785c83.github.io/posts/EC2_security/" rel="alternate" type="text/html" title="EC2 보안강화하기" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_security</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_security/">&lt;h5 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lesstif.com/security/fail2ban-ssh-43843899.html&quot;&gt;fail2ban 으로 SSH 서버 강화하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ec2-인스턴스-설정&quot;&gt;EC2 인스턴스 설정&lt;/h2&gt;
 
 &lt;h4 id=&quot;ssh-port-변경&quot;&gt;SSH port 변경&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&quot;text-highlight warning&quot;&gt; 일단 보류 &lt;/span&gt;&lt;/p&gt;
@@ -30,6 +44,13 @@ PasswordAuthentication yes
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service ssh restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;fail2ban-설정&quot;&gt;fail2ban 설정&lt;/h2&gt;
+
+&lt;h4 id=&quot;fail2ban의-역할&quot;&gt;fail2ban의 역할&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><summary type="html">참고사이트 fail2ban 으로 SSH 서버 강화하기</summary></entry><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h5 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chinmaypatil.medium.com/deploying-nodejs-express-mongodb-application-on-aws-ec2-e32a8e3ea8a1&quot;&gt;Deploying NodeJS, Express, MongoDB application on AWS EC2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;expressjs-mongodb-환경설정&quot;&gt;Express.js, MongoDB 환경설정&lt;/h2&gt;
 
@@ -100,8 +121,6 @@ sudo systemctl status mongod
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongo --port 27017 -u 사용자계정 -p '비밀번호' --authenticationDatabase '디비이름'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;이렇게 database 설정까지 완료했으면 이제 Express.js 서버를 가져와 실행해준다. (database를 미리 한 이유는 안하면 서버를 먼저 가져와서 실행해봤자 database 접속 못 할거라)&lt;/p&gt;
 
 &lt;h2 id=&quot;expressjs-실행&quot;&gt;Express.js 실행&lt;/h2&gt;
@@ -115,13 +134,9 @@ sudo systemctl status mongod
 &lt;p&gt;여기까지 마치고 나면 해당 폴더의 하위에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules/&lt;/code&gt; 폴더가 생성된 것을 확인할 수 있다.
 여기까지 마치면 서버를 실행해 서버가 잘 실행되고 데이터베이스에 잘 연결되었는지 확인한다.&lt;/p&gt;
 
-&lt;div class=&quot;comment-box&quot;&gt;
-&lt;div class=&quot;title&quot;&gt;포트 방화벽 해제&lt;/div&gt;  
-&lt;div class=&quot;body&quot;&gt;
+&lt;p class=&quot;comment-box&quot;&gt;&lt;strong&gt;포트 방화벽 해제&lt;/strong&gt;
 외부에서 서버의 특정 포트에 접근하려면 해당 포트의 방화벽을 해제해야 한다. &lt;br /&gt;
-&lt;span class=&quot;warning text-highlight&quot;&gt;어떤 포트를 왜 열어야 되는지 정확히 모르겠다&lt;/span&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;span class=&quot;warning text-highlight&quot;&gt;어떤 포트를 왜 열어야 되는지 정확히 모르겠다&lt;/span&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;nginx-설정&quot;&gt;NGINX 설정&lt;/h2&gt;
 
@@ -175,9 +190,7 @@ sduo systemctl status nginx
 
 &lt;h2 id=&quot;pm2&quot;&gt;PM2&lt;/h2&gt;
 
-&lt;div class=&quot;comment-box&quot;&gt;
-원래는 구매한 도메인 SSL certificate 완료를 해서 해당 도메인을 서버에 씌우고 web server의 port를 443으로 변경하여 실행하였다. 근데 PM2에서 해당 서버를 실행하면 &lt;span class=&quot;text-highlight warning&quot;&gt;Error: listen EACCES 0.0.0.0:443&lt;/span&gt; 다음과 같은 error가 떠서 서치해본 결과 pm2에서 http, https 포트로의 실행은 불가능했고 따라서 다시 기존처럼 서버 포트를 설정하고 nginx를 통해 http/https 요청이 서버 port로 넘어갈 수 있게 하고 pm2를 실행하였다.
-&lt;/div&gt;
+&lt;p class=&quot;comment-box&quot;&gt;원래는 구매한 도메인 SSL certificate 완료를 해서 해당 도메인을 서버에 씌우고 web server의 port를 443으로 변경하여 실행하였다. 근데 PM2에서 해당 서버를 실행하면 &lt;span class=&quot;text-highlight warning&quot;&gt;Error: listen EACCES 0.0.0.0:443&lt;/span&gt; 다음과 같은 error가 떠서 서치해본 결과 pm2에서 http, https 포트로의 실행은 불가능했고 따라서 다시 기존처럼 서버 포트를 설정하고 nginx를 통해 http/https 요청이 서버 port로 넘어갈 수 있게 하고 pm2를 실행하였다.&lt;/p&gt;
 
 &lt;h4 id=&quot;ecosystem-file-생성&quot;&gt;ecosystem file 생성&lt;/h4&gt;
 
@@ -186,7 +199,7 @@ sduo systemctl status nginx
 &lt;h2 id=&quot;cerbot&quot;&gt;cerbot&lt;/h2&gt;
 &lt;p&gt;원래는 pm2에서 포트 443을 이용해 https 통신을 할 경우 cerbot을 통해 도메인에 대한 ssl certificate key를 받아 이를 설정하는 것 같은데 key 발급을 위해 http로 도메인에 request를 보내 인증을 진행하는 것 같았다.&lt;/p&gt;
 
-&lt;p&gt;하지만 나의 경우 http로 할 경우 이미 SSL 인증을 받아서 그런지 502 error가 떴고 오히려 443으로 열었을 경우 진행이 잘 되었는데 이렇게 해도 되는지 모르겠으며 왜 되는지도 모르겠다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><category term="ExpressJS" /><category term="MongoDB" /><category term="NodeJS" /><category term="nginx" /><category term="pm2" /><summary type="html">EC2 인스턴스 설정</summary></entry><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
+&lt;p&gt;하지만 나의 경우 http로 할 경우 이미 SSL 인증을 받아서 그런지 502 error가 떴고 오히려 443으로 열었을 경우 진행이 잘 되었는데 이렇게 해도 되는지 모르겠으며 왜 되는지도 모르겠다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><category term="ExpressJS" /><category term="MongoDB" /><category term="NodeJS" /><category term="nginx" /><category term="pm2" /><summary type="html">참고 사이트 Deploying NodeJS, Express, MongoDB application on AWS EC2</summary></entry><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
 [input]
 ----------------------------------------------------------------
@@ -242,12 +255,8 @@ SET_CHANNEL,
 
 &lt;p&gt;⇒ high demand node의 발생이 불규칙적이고 예측할 수 없을 때 특정 distance에 demand가 과도하게 발생한다면 논문에서 제시한 방법이 비효율적일 수 있다.&lt;/p&gt;
 
-&lt;div class=&quot;comment-box&quot;&gt;
-&lt;strong&gt;WHY?&lt;/strong&gt;&lt;br /&gt;  
-&lt;p style=&quot;padding-left: 10px; margin-top: 1rem&quot;&gt;
-한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문
-&lt;/p&gt;
-&lt;/div&gt;
+&lt;p class=&quot;comment-box&quot;&gt;&lt;strong&gt;WHY?&lt;/strong&gt;
+한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문&lt;/p&gt;
 
 &lt;h3 id=&quot;setting-channel-and-cst&quot;&gt;Setting channel and CST&lt;/h3&gt;
 
@@ -347,7 +356,7 @@ SET_CHANNEL,
 &lt;h5 id=&quot;2번-결과에-대한-대안&quot;&gt;&amp;lt;2번 결과에 대한 대안&amp;gt;&lt;/h5&gt;
 
 &lt;p&gt;실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
-따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.&lt;/p&gt;
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;2차&quot;&gt;2차&lt;/h2&gt;
 
@@ -395,7 +404,7 @@ SET_CHANNEL,
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="python" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;density 증가로 인해&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;DCF의 unfair share of bandwidth among nodes issue&lt;/li&gt;
@@ -414,12 +423,10 @@ SET_CHANNEL,
 
 &lt;h3 id=&quot;main-idea&quot;&gt;Main Idea&lt;/h3&gt;
 &lt;p&gt;associated AP와 &lt;strong&gt;“distance”&lt;/strong&gt;가 비슷한 node를 grouping &amp;amp; assigning &lt;span style=&quot;color:red&quot;&gt;same&lt;/span&gt; channel&lt;/p&gt;
-&lt;div class=&quot;comment-box&quot;&gt;
-&lt;p&gt;
-👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록&lt;/p&gt;
-👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 &lt;strong&gt;&quot;received signal strength&quot;&lt;/strong&gt; 를 기반으로 측정한 distance이다
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;comment-box&quot;&gt;👉 CST가 같은 node들의 distance 차이를 최소화해 hidden terminal을 줄이면서도 distance가 가까운 node들은 좀 더 aggressive한 transmission을 통해 throughput을 높일 수 있도록&lt;/p&gt;
+
+&lt;p class=&quot;comment-box&quot;&gt;👉 여기서 distance는 AP와 node 사이의 물리적 거리가 아니라 &lt;span class=&quot;warning text-highlight&quot;&gt;received signal strength&lt;/span&gt; 를 기반으로 측정한 distance이다&lt;/p&gt;
 
 &lt;h4 id=&quot;channel-assignment&quot;&gt;Channel Assignment&lt;/h4&gt;
 &lt;p&gt;$C$ orthogonal channels, $N$ high traffic node, $M$ low traffic node가 있다고 할 때&lt;/p&gt;
@@ -729,4 +736,4 @@ $$&lt;/p&gt;
   &lt;li&gt;Varying Offset of $P_M$&lt;/li&gt;
   &lt;li&gt;Impact of Path Loss Model Error ( Varying $\gamma$ )&lt;/li&gt;
   &lt;li&gt;Performance of the Propsed Scheme under Dynamic Traffic Conditions&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="paper" /><summary type="html">Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="paper" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가</summary></entry></feed>

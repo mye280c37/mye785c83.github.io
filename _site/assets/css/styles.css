@@ -23,6 +23,8 @@
 
     <title> | mye785C83
     </title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -285,6 +287,15 @@ h2 .underline-box, h3 .underline-box{
     color: blanchedalmond;
     padding: 1rem 1.5rem;
     margin-bottom: 15px;
+    padding-left: 33px; 
+}
+
+.comment-box strong{
+    display: block;
+    font-weight: bolder;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    margin-left: -13px; 
 }
 
 .comment-box>.title{

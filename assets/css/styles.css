@@ -199,6 +199,15 @@ h2 .underline-box, h3 .underline-box{
     color: blanchedalmond;
     padding: 1rem 1.5rem;
     margin-bottom: 15px;
+    padding-left: 33px; 
+}
+
+.comment-box strong{
+    display: block;
+    font-weight: bolder;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    margin-left: -13px; 
 }
 
 .comment-box>.title{

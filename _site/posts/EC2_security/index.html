@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko-KR"  style="height: 100% !important;">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <meta name="pv-cache-enabled" content="">
+
+        
+    
+
+    <link type="application/atom+xml" rel="alternate" href="/mye785c83.github.io/feed.xml" title="mye785C83" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="EC2 보안강화하기" />
+<meta name="author" content="mye785C83" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="참고사이트 fail2ban 으로 SSH 서버 강화하기" />
+<meta property="og:description" content="참고사이트 fail2ban 으로 SSH 서버 강화하기" />
+<meta property="og:site_name" content="mye785C83" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-12T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="EC2 보안강화하기" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/posts/EC2_security/"},"description":"참고사이트 fail2ban 으로 SSH 서버 강화하기","url":"/mye785c83.github.io/posts/EC2_security/","author":{"@type":"Person","name":"mye785C83"},"headline":"EC2 보안강화하기","dateModified":"2021-07-12T00:00:00+09:00","datePublished":"2021-07-12T00:00:00+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <title>EC2 보안강화하기 | mye785C83
+    </title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"
+    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+    crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- D2Coding Webfont  -->
+    <link href="http://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css">
+    
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    
+</head>
+
+  <body style="background-color: #efefef; height: 100% !important;"
+    oncopy="return false" oncut="return false" onpaste="return false"
+  >
+
+    <div class="bg-785c83 h-lg-100">
+  <div class="masthead w-100">
+    <a href="/" style="text-decoration: none;"><h1 class="h1">mye785c83</h1> </a>
+    <a href="https://github.com/mye785C83">
+        <span style="color: rgb(233, 219, 140); font-size: 20px;">
+          <i class="fab fa-github"></i>
+        </span>
+    </a>
+  </div>
+  <nav class="mt-5 pb-2">
+        
+          <div class="nav-item w-100 text-center">
+            <a class="nav-link active" aria-current="page" href="/About/" >About</a>
+          </div>
+        
+          <div class="nav-item w-100 text-center">
+            <a class="nav-link active" aria-current="page" href="/AS818/" >AS818</a>
+          </div>
+        
+          <div class="nav-item w-100 text-center">
+            <a class="nav-link active" aria-current="page" href="/Web/" >Web</a>
+          </div>
+        
+  </nav>
+</div>
+    
+    <div class="content-box stop-dragging">
+      <div class="container p-5">
+        <div class="px-5 mx-3">
+          <div class="post">
+    <h1 class="h1 py-5">EC2 보안강화하기</h1>
+     <div class="text-right">Web</div>
+     <div class="pb-5 text-right">12 Jul 2021 - mye785c83</div>
+     
+     <div class="mb-3 d-flex flex-wrap">
+         
+            
+            <span class="tag selected m-1">AWS</span>
+            
+         
+            
+            <span class="tag selected m-1">EC2</span>
+            
+         
+     </div>
+     
+     <div class="divider-box"></div>
+     <div class="px-4"><h5 id="참고사이트">참고사이트</h5>
+<ul>
+  <li><a href="https://www.lesstif.com/security/fail2ban-ssh-43843899.html">fail2ban 으로 SSH 서버 강화하기</a></li>
+</ul>
+
+<h2 id="ec2-인스턴스-설정">EC2 인스턴스 설정</h2>
+
+<h4 id="ssh-port-변경">SSH port 변경</h4>
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
+
+<p>기본 SSH 포트는 22인데 이를 다른 포트로 변경해주는 것이 좋다.</p>
+
+<h4 id="password-authentication-for-ssh">password authentication for SSH</h4>
+
+<p><span class="text-highlight warning"> 일단 보류: 굳이 밖에서 서버 접속할 일 없음 </span></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd `username`
+</code></pre></div></div>
+
+<p>EC2의 경우 <code class="language-plaintext highlighter-rouge">username=ubuntu</code></p>
+
+<h5 id="sshd_conf-file-업데이트">sshd_conf file 업데이트</h5>
+
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
+
+<p><code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code> 파일을 열어 <code class="language-plaintext highlighter-rouge">PasswordAuthentication</code> 값을 yes로 변경한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/ssh/sshd_config
+
+PasswordAuthentication yes
+</code></pre></div></div>
+
+<h4 id="ssh-재시작">SSH 재시작</h4>
+<p><span class="text-highlight warning"> 일단 보류 </span></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service ssh restart
+</code></pre></div></div>
+
+<h2 id="fail2ban-설정">fail2ban 설정</h2>
+
+<h4 id="fail2ban의-역할">fail2ban의 역할</h4>
+</div>
+ </div>
+ 
+ <!--
+  Navigation buttons at the bottom of the post.
+-->
+<div class="mt-5 post-nav p-3">
+  <div>Web의 다른 글</div>
+  <div class="underline-box"></div>
+  <div class="mt-3 px-2">
+      <ul>
+        
+          
+            
+              
+            
+            
+          
+            
+              
+                
+              
+            
+            
+          
+            
+              
+                
+                <li><a href="/posts/EC2_MEN_deploy/">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</a></li>
+                
+              
+            
+            
+          
+            
+              
+            
+            
+          
+            
+              
+            
+            
+          
+      </ul>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

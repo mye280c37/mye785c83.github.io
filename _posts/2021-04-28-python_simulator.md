@@ -2,8 +2,9 @@
 layout: post
 title : python을 이용한 간단한 network simulation 구현
 category: AS818
-tags: [python]
+tags: [python, network, wirelessNetwork]
 use_math: true
+complete: true
 ---
 
 #### variable setting
@@ -64,12 +65,10 @@ AP와 ms 사이의 distance 값이 특정 범위에 몰리도록 mobile node를 
 ⇒ high demand node의 발생이 불규칙적이고 예측할 수 없을 때 특정 distance에 demand가 과도하게 발생한다면 논문에서 제시한 방법이 비효율적일 수 있다.
 
 
-<div class="comment-box">
-<strong>WHY?</strong><br>  
-<p style="padding-left: 10px; margin-top: 1rem">
+**WHY?**
 한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문
-</p>
-</div>
+{: .comment-box}
+
 
 ### Setting channel and CST
 
@@ -133,7 +132,7 @@ bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻�
 ##### <2번 결과에 대한 대안>
 
 실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
-따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 $\text{mbps}$가 커진 효과를 내보려 한다.
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.
 
 
 ## 2차
