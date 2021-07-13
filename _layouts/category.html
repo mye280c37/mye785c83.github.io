@@ -4,6 +4,9 @@ layout: default
 
 <h2 class="h2 mb-4">
     {{ page.title }}
+    {% if page.description %}
+    <div class="description">- {{ page.description }}</div>
+    {% endif %}
     <div class="underline-box"></div>
 </h2>
 <div class="post-list">

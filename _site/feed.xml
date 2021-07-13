@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-12T22:03:48+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">background 개념</title><link href="/mye785c83.github.io/posts/background/" rel="alternate" type="text/html" title="background 개념" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/background</id><content type="html" xml:base="/mye785c83.github.io/posts/background/">&lt;h2 id=&quot;fading&quot;&gt;fading&lt;/h2&gt;
-
-&lt;h4 id=&quot;type에-따른-fading-분류&quot;&gt;type에 따른 fading 분류&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.ktword.co.kr/abbr_view.php?m_temp1=641&quot;&gt;Fading - 정보통신기술용어해설&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;csmaca&quot;&gt;CSMA/CA&lt;/h2&gt;
-
-&lt;h4 id=&quot;하나의-ap-or-mobile-station이-destination이-생겼을-경우&quot;&gt;하나의 AP (or mobile station)이 destination이 생겼을 경우&lt;/h4&gt;
-
-&lt;h4 id=&quot;downlink-하나의-channel에-대해&quot;&gt;(downlink): 하나의 channel에 대해&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">fading</summary></entry><entry><title type="html">EC2 보안강화하기</title><link href="/mye785c83.github.io/posts/EC2_security/" rel="alternate" type="text/html" title="EC2 보안강화하기" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_security</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_security/">&lt;h5 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h5&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-13T18:36:57+09:00</updated><id>/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">proposed Scheme 4차</title><link href="/posts/proposed04/" rel="alternate" type="text/html" title="proposed Scheme 4차" /><published>2021-07-13T00:00:00+09:00</published><updated>2021-07-13T00:00:00+09:00</updated><id>/posts/proposed04</id><content type="html" xml:base="/posts/proposed04/"></content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html"></summary></entry><entry><title type="html">EC2 보안강화하기</title><link href="/posts/EC2_security/" rel="alternate" type="text/html" title="EC2 보안강화하기" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/posts/EC2_security</id><content type="html" xml:base="/posts/EC2_security/">&lt;h5 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.lesstif.com/security/fail2ban-ssh-43843899.html&quot;&gt;fail2ban 으로 SSH 서버 강화하기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -47,7 +38,16 @@ PasswordAuthentication yes
 
 &lt;h2 id=&quot;fail2ban-설정&quot;&gt;fail2ban 설정&lt;/h2&gt;
 
-&lt;h4 id=&quot;fail2ban의-역할&quot;&gt;fail2ban의 역할&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><summary type="html">참고사이트 fail2ban 으로 SSH 서버 강화하기</summary></entry><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h5 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h5&gt;
+&lt;h4 id=&quot;fail2ban의-역할&quot;&gt;fail2ban의 역할&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><summary type="html">참고사이트 fail2ban 으로 SSH 서버 강화하기</summary></entry><entry><title type="html">background 개념</title><link href="/posts/background/" rel="alternate" type="text/html" title="background 개념" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/posts/background</id><content type="html" xml:base="/posts/background/">&lt;h2 id=&quot;fading&quot;&gt;fading&lt;/h2&gt;
+
+&lt;h4 id=&quot;type에-따른-fading-분류&quot;&gt;type에 따른 fading 분류&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ktword.co.kr/abbr_view.php?m_temp1=641&quot;&gt;Fading - 정보통신기술용어해설&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;csmaca&quot;&gt;CSMA/CA&lt;/h2&gt;
+
+&lt;h4 id=&quot;하나의-ap-or-mobile-station이-destination이-생겼을-경우&quot;&gt;하나의 AP (or mobile station)이 destination이 생겼을 경우&lt;/h4&gt;
+
+&lt;h4 id=&quot;downlink-하나의-channel에-대해&quot;&gt;(downlink): 하나의 channel에 대해&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">fading</summary></entry><entry><title type="html">proposed Scheme 3차</title><link href="/posts/proposed03/" rel="alternate" type="text/html" title="proposed Scheme 3차" /><published>2021-07-06T00:00:00+09:00</published><updated>2021-07-06T00:00:00+09:00</updated><id>/posts/proposed03</id><content type="html" xml:base="/posts/proposed03/"></content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html"></summary></entry><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/posts/EC2_MEN_deploy</id><content type="html" xml:base="/posts/EC2_MEN_deploy/">&lt;h5 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://chinmaypatil.medium.com/deploying-nodejs-express-mongodb-application-on-aws-ec2-e32a8e3ea8a1&quot;&gt;Deploying NodeJS, Express, MongoDB application on AWS EC2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -199,53 +199,49 @@ sduo systemctl status nginx
 &lt;h2 id=&quot;cerbot&quot;&gt;cerbot&lt;/h2&gt;
 &lt;p&gt;원래는 pm2에서 포트 443을 이용해 https 통신을 할 경우 cerbot을 통해 도메인에 대한 ssl certificate key를 받아 이를 설정하는 것 같은데 key 발급을 위해 http로 도메인에 request를 보내 인증을 진행하는 것 같았다.&lt;/p&gt;
 
-&lt;p&gt;하지만 나의 경우 http로 할 경우 이미 SSL 인증을 받아서 그런지 502 error가 떴고 오히려 443으로 열었을 경우 진행이 잘 되었는데 이렇게 해도 되는지 모르겠으며 왜 되는지도 모르겠다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><category term="ExpressJS" /><category term="MongoDB" /><category term="NodeJS" /><category term="nginx" /><category term="pm2" /><summary type="html">참고 사이트 Deploying NodeJS, Express, MongoDB application on AWS EC2</summary></entry><entry><title type="html">python을 이용한 간단한 network simulation 구현</title><link href="/mye785c83.github.io/posts/python_simulator/" rel="alternate" type="text/html" title="python을 이용한 간단한 network simulation 구현" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/python_simulator</id><content type="html" xml:base="/mye785c83.github.io/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
-[input]
-----------------------------------------------------------------
-NUM_GRID,       grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨
-AREA_SIZE,      한 grid 당 사이즈
-NUM_NODES,      mobile node 개수
-NUM_CH,         channel 개수
-PROTO,          protocol(tramsmission) type 
-    0: carriersense
-    1: DSC
-    2: smart
-    3: new carrier
-CS,             CST 값 
-SEED,           seed 값
-END,            simulation end time. END만큼 각 채널이 전송 반복
-VERBOSE, 
-IDEAL, 
-LATEX, 
-MARGIN,         cst margin 값 (실제 setting cst = 설정 cst +  margin)
-DEPLOY,         mobile node 분포 형태
-    0: seed를 이용한 random 분포
-    1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포
-SET_CHANNEL,
-    0: 기존의 방식대로
-    1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록
-    2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록
-------------------------------------------------------------------
-'''&lt;/span&gt;
+&lt;p&gt;하지만 나의 경우 http로 할 경우 이미 SSL 인증을 받아서 그런지 502 error가 떴고 오히려 443으로 열었을 경우 진행이 잘 되었는데 이렇게 해도 되는지 모르겠으며 왜 되는지도 모르겠다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="Web" /><category term="AWS" /><category term="EC2" /><category term="ExpressJS" /><category term="MongoDB" /><category term="NodeJS" /><category term="nginx" /><category term="pm2" /><summary type="html">참고 사이트 Deploying NodeJS, Express, MongoDB application on AWS EC2</summary></entry><entry><title type="html">proposed Scheme 2차</title><link href="/posts/proposed02/" rel="alternate" type="text/html" title="proposed Scheme 2차" /><published>2021-06-02T00:00:00+09:00</published><updated>2021-06-02T00:00:00+09:00</updated><id>/posts/proposed02</id><content type="html" xml:base="/posts/proposed02/">&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
 
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RunSim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NUM_GRID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_NODES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NODES_PER_CELL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AREA_SIZE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_CH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PROTO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SEED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VERBOSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CH_BW_LOSS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDEAL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TOKEN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DEPLOY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SET_CHANNEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# variable setting
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;param_seed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SEED&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_GRID&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_num_aps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_num_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_NODES&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_num_channels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_CH&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_end_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_cs_thresh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CS&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_protocol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PROTO&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_verbose&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VERBOSE&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_ch_bw_loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CH_BW_LOSS&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_export_latex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;param_margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeslot_per_tx&lt;/code&gt; 설정
+    &lt;ul&gt;
+      &lt;li&gt;기존의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX&lt;/code&gt;로 고정되어 있던 time slot 크기를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX * ch_weight[ch]&lt;/code&gt;로 변경
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;기대 결과&lt;/p&gt;
 
-&lt;h2 id=&quot;1차&quot;&gt;1차&lt;/h2&gt;
+            &lt;p&gt;늘어난 timeslot만큼 $\text{tx_packet}$ 의 수가 늘어날 것으로 예상&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;실제 결과&lt;/p&gt;
+
+            &lt;p&gt;실제로 $\text{type2}$와 결과를 비교해보면 $\text{tx_packet}$의 수는 줄어들고, $\text{lost_packet}$의 수는 거의 비슷해 결론적으로 $\text{total throughput}$이 줄어드는 것을 확인할 수 있었다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;결과 분석&lt;/p&gt;
+
+            &lt;p&gt;각 채널에 할당된 cst를 확인해보면 미세하게 $\text{type3}$의 cst가 모두 작은 것을 확인할 수 있다.&lt;/p&gt;
+
+            &lt;p&gt;cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 skewed deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.&lt;/p&gt;
+
+            &lt;p&gt;channel 별 throughput을 비교하면 모든 채널의 throughput이 감소하는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1 이하인 channel의 경우, timeslot이 감소해서인 것 같다.&lt;/p&gt;
+
+            &lt;p&gt;다만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1보다 큰 경우에도 channel throughput이 감소하는데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;에 의해 늘어난 timeslot의 이득보다 node 개수가 많아지면서 증가한 간섭에 의한 손실이 더 커서인 것으로 예상된다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</summary></entry><entry><title type="html">proposed Scheme 1차</title><link href="/posts/proposed01/" rel="alternate" type="text/html" title="proposed Scheme 1차" /><published>2021-04-29T00:00:00+09:00</published><updated>2021-04-29T00:00:00+09:00</updated><id>/posts/proposed01</id><content type="html" xml:base="/posts/proposed01/">&lt;h2 id=&quot;1차&quot;&gt;1차&lt;/h2&gt;
 
 &lt;h3 id=&quot;mobile-node-deployment&quot;&gt;Mobile Node Deployment&lt;/h3&gt;
 
@@ -356,59 +352,119 @@ SET_CHANNEL,
 &lt;h5 id=&quot;2번-결과에-대한-대안&quot;&gt;&amp;lt;2번 결과에 대한 대안&amp;gt;&lt;/h5&gt;
 
 &lt;p&gt;실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
-따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.&lt;/p&gt;
+따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">1차</summary></entry><entry><title type="html">python network simulator 분석</title><link href="/posts/python_simulator/" rel="alternate" type="text/html" title="python network simulator 분석" /><published>2021-04-28T00:00:00+09:00</published><updated>2021-04-28T00:00:00+09:00</updated><id>/posts/python_simulator</id><content type="html" xml:base="/posts/python_simulator/">&lt;h4 id=&quot;variable-setting&quot;&gt;variable setting&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
+[input]
+----------------------------------------------------------------
+NUM_GRID,       grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨
+AREA_SIZE,      한 grid 당 사이즈
+NUM_NODES,      mobile node 개수
+NUM_CH,         channel 개수
+PROTO,          protocol(tramsmission) type 
+    0: carriersense
+    1: DSC
+    2: smart
+    3: new carrier
+CS,             CST 값 
+SEED,           seed 값
+END,            simulation end time. END만큼 각 채널이 전송 반복
+VERBOSE, 
+IDEAL, 
+LATEX, 
+MARGIN,         cst margin 값 (실제 setting cst = 설정 cst +  margin)
+DEPLOY,         mobile node 분포 형태
+    0: seed를 이용한 random 분포
+    1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포
+SET_CHANNEL,
+    0: 기존의 방식대로
+    1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록
+    2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록
+------------------------------------------------------------------
+'''&lt;/span&gt;
 
-&lt;h2 id=&quot;2차&quot;&gt;2차&lt;/h2&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RunSim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NUM_GRID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_NODES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NODES_PER_CELL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AREA_SIZE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_CH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PROTO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SEED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VERBOSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CH_BW_LOSS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IDEAL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TOKEN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DEPLOY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SET_CHANNEL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# variable setting
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;param_seed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SEED&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_GRID&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_num_aps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_num_grid&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_num_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_NODES&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_num_channels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NUM_CH&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_end_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;END&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_cs_thresh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CS&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_protocol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PROTO&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_verbose&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VERBOSE&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_ch_bw_loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CH_BW_LOSS&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_export_latex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LATEX&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;param_margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MARGIN&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;$\text{type1}$, $\text{type2}$에 대한 setting은 유지&lt;/p&gt;
+&lt;h2 id=&quot;simulation-logic&quot;&gt;simulation logic&lt;/h2&gt;
 
-&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정-1&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
+&lt;h4 id=&quot;simulation-가정&quot;&gt;simulation 가정&lt;/h4&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;channel 할당
+  &lt;li&gt;SNR threshold만 넘으면 패킷이 성공적으로 수신되었다고 가정한다.&lt;/li&gt;
+  &lt;li&gt;설정된 END_TIME동안 TIMESLOT_PER_TX 을 주기로 하는 서브 시뮬레이션이 반복된다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;channel이 완전히 비어있는 상태에서 서브 시뮬레이션이 시작된다.&lt;/p&gt;
+
+    &lt;p&gt;⇒ 따라서 처음에 destination이 있는 모든 ap가 channel이 idle이라고 감지한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;TIMESLOT_PER_TX 동안 전송이 시작된 packet은 전송 시작된 시점에 상관없이 다음 iteration에서 모두 전송을 완료한다고 가정한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;simulation-flowchart&quot;&gt;simulation flowchart&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/simulation_flowchart.jpg&quot; alt=&quot;simulation flowchart&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;한번의 t iteration에서 각 channel은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;time_slot_per_tx&lt;/code&gt; 동안 simulation을 진행한다.&lt;/li&gt;
+  &lt;li&gt;destination을 가진 AP들 중 가장 작은 contention window(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;win_count&lt;/code&gt;)를 가진 AP가 packet 전송을 시작한다.
     &lt;ul&gt;
-      &lt;li&gt;1차와 동일&lt;/li&gt;
+      &lt;li&gt;destination을 가진 AP들은 모두 channel이 idle이라고 판단하고 contention window count를 시작한 것&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;win_count&lt;/code&gt;만큼 모든 AP들이 contention window count를 진행한 것&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;cst 설정
-    &lt;ul&gt;
-      &lt;li&gt;1차와 동일&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeslot_per_tx&lt;/code&gt; 설정
-    &lt;ul&gt;
-      &lt;li&gt;기존의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX&lt;/code&gt;로 고정되어 있던 time slot 크기를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOTS_PER_TX * ch_weight[ch]&lt;/code&gt;로 변경
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;기대 결과&lt;/p&gt;
+  &lt;li&gt;나머지 destiation을 가진 AP들은 carrier sensing을 통해 busy로 감지될 경우 transmission 시도를 pause한다.&lt;/li&gt;
+  &lt;li&gt;channel을 idle로 탐지한 AP들의 경우 자신의 남은 contention window에 대해 다시 count를 시작한다.&lt;/li&gt;
+  &lt;li&gt;이 중 가장 작은 contension window를 가진 AP가 packet 전송을 시작한다.&lt;/li&gt;
+  &lt;li&gt;누적된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;win_count&lt;/code&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;slot_count&lt;/code&gt;)가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;time_slot_per_tx&lt;/code&gt; 커지거나 더 이상 전송을 시도하는 AP가 없을 경우, 해당 iteration은 종료되고 전송을 시작한 packet들에 대해 SNR을 구해 packet이 성공적으로 도착했는지 판단한다.&lt;/li&gt;
+&lt;/ul&gt;
 
-            &lt;p&gt;늘어난 timeslot만큼 $\text{tx_packet}$ 의 수가 늘어날 것으로 예상&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;실제 결과&lt;/p&gt;
+&lt;h2 id=&quot;앞으로-구현해야하는-코드&quot;&gt;앞으로 구현해야하는 코드&lt;/h2&gt;
 
-            &lt;p&gt;실제로 $\text{type2}$와 결과를 비교해보면 $\text{tx_packet}$의 수는 줄어들고, $\text{lost_packet}$의 수는 거의 비슷해 결론적으로 $\text{total throughput}$이 줄어드는 것을 확인할 수 있었다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;결과 분석&lt;/p&gt;
+&lt;h4 id=&quot;biased-deployment-환경-구현&quot;&gt;biased deployment 환경 구현&lt;/h4&gt;
 
-            &lt;p&gt;각 채널에 할당된 cst를 확인해보면 미세하게 $\text{type3}$의 cst가 모두 작은 것을 확인할 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;distance-range-설정&quot;&gt;distance range 설정&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">my proposed Scheme</title><link href="/posts/proposed_scheme/" rel="alternate" type="text/html" title="my proposed Scheme" /><published>2021-04-21T00:00:00+09:00</published><updated>2021-04-21T00:00:00+09:00</updated><id>/posts/proposed_scheme</id><content type="html" xml:base="/posts/proposed_scheme/">&lt;h4 id=&quot;based-paper&quot;&gt;based paper&lt;/h4&gt;
 
-            &lt;p&gt;cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 skewed deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.hindawi.com/journals/wcmc/2019/2149606/&quot;&gt;A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs&lt;/a&gt;&lt;/p&gt;
 
-            &lt;p&gt;channel 별 throughput을 비교하면 모든 채널의 throughput이 감소하는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1 이하인 channel의 경우, timeslot이 감소해서인 것 같다.&lt;/p&gt;
+&lt;h2 id=&quot;my-proposed-scheme&quot;&gt;my proposed Scheme&lt;/h2&gt;
 
-            &lt;p&gt;다만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1보다 큰 경우에도 channel throughput이 감소하는데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;에 의해 늘어난 timeslot의 이득보다 node 개수가 많아지면서 증가한 간섭에 의한 손실이 더 커서인 것으로 예상된다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/mye785c83.github.io/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/10.1155_2019_2149606</id><content type="html" xml:base="/mye785c83.github.io/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;network density가 높아지고 node의 이동성도 높아지는만큼 특정 distance를 가진 node들에 대한 traffic이 증가하는 traffic pattern이 발생할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;기존 base paper처럼 단순히 channel에 distance 순으로 같은 개수만큼 균등하게 node를 분배한다면 위와 같은 상황에서 한 채널을 할당받은 node group안에서 distance 차로 인한 edge node가 발생할 수 있다.&lt;br /&gt;
+또한 base paper에서 하나의 node group의 node들 중 가장 거리가 먼 node를 기준으로 CST를 설정하기 때문에 group 안에서 distance 차이가 크게 날 경우 conservative transmission이 심해질 수 있다.&lt;/p&gt;
+
+&lt;p&gt;따라서 distance 순으로 channel을 할당하는 것을 유지하되, distance가 비슷한 node들끼리 경쟁할 수 있도록 node를 grouping한 뒤, node 개수에 비례하게 channel bandwidth를 설정해 node들이 최대한 덜 conservative transmission을 할 수 있게 하면서 또 edge node의 발생을 줄일 수 있도록 한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;my-proposed-scheme에서-발생할-수-있는-문제-상황&quot;&gt;my proposed Scheme에서 발생할 수 있는 문제 상황&lt;/h4&gt;
+
+&lt;p&gt;network 환경이 특정 distance에 집중된 상황에서 bandwidth를 적용해 비슷한 distance끼리 경쟁하게 될 때 특정 distance에 너무 몰려버리면 비슷한 distance끼리 경쟁하게 돼서 얻을 수 있는 이점보다 너무 많은 node로 인해 collision 증가가 심해져 얻게 되는 손해가 더 커질 수 있다. 따라서 이 둘 사이에서 적당한 균형을 찾아야 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1차-목표&quot;&gt;1차 목표&lt;/h2&gt;
+
+&lt;p&gt;associated AP와의 distance가 특정 범위에 몰리도록 설정된 환경에서 channel에 균등한 distance range를 설정해 해당 range 안에 들어오는 node를 channel에 할당하는 방식을 취한다.&lt;/p&gt;
+
+&lt;p&gt;이때 channel에 할당된 node 개수에 비례하게 bandwidth를 설정해 node 개수가 많은 channel의 경우 bandwidth가 그만큼 커져 더 많은 packet이 전송될 수 있도록 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;최종-목표&quot;&gt;최종 목표&lt;/h2&gt;
+
+&lt;p&gt;bandwidth가 넓어지면서 얻는 troughput 이득과 node 개수가 증가함에 따른 collision 증가로 인한 throughput 손해 사이에서 최대한 throughput을 높일 수 있는 방향을 찾도록 channel assignment logic을 설계한다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="paper" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">based paper</summary></entry><entry><title type="html">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</title><link href="/posts/10.1155_2019_2149606/" rel="alternate" type="text/html" title="A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>/posts/10.1155_2019_2149606</id><content type="html" xml:base="/posts/10.1155_2019_2149606/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;density 증가로 인해&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;DCF의 unfair share of bandwidth among nodes issue&lt;/li&gt;
-  &lt;li&gt;CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가&lt;/li&gt;
+  &lt;li&gt;CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmission으로 인해 exposed terminals가 증가&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;proposed-scheme&quot;&gt;Proposed Scheme&lt;/h2&gt;
@@ -736,4 +792,4 @@ $$&lt;/p&gt;
   &lt;li&gt;Varying Offset of $P_M$&lt;/li&gt;
   &lt;li&gt;Impact of Path Loss Model Error ( Varying $\gamma$ )&lt;/li&gt;
   &lt;li&gt;Performance of the Propsed Scheme under Dynamic Traffic Conditions&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="AS818" /><category term="paper" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmissio으로 인해 exposed terminals가 증가</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="paper" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">Problem density 증가로 인해 DCF의 unfair share of bandwidth among nodes issue CST 값이 너무 크면 aggressive trasmission으로 인해 hidden terminals가 증가하고 CST 값이 너무 작으면 conservative transmission으로 인해 exposed terminals가 증가</summary></entry></feed>

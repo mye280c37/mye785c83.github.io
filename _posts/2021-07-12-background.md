@@ -1,7 +1,7 @@
 ---
 layout: post
 title : background 개념
-category: AS818
+category: ICSL
 tags: [network, wirelessNetwork]
 complete: false
 ---
