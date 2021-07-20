@@ -34,18 +34,13 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
     <!-- css -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/syntax.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"
-    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-    crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
@@ -251,11 +246,17 @@
 
 <p>bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서<span style="color: red;">‘<strong>만</strong>’</span> $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.</p>
 
+<p class="edit-box"><span class="edit-info">21.07.20 수정</span>
+bandwidth를 설정할 경우 node 개수를 제외하고는 packet을 전송하고 받는 과정이 동일하기 때문에 bandwidth가 없는 경우와 유사한 <code class="language-plaintext highlighter-rouge">tx_vector == 1</code> (node 개수에 비례해 약간의 차이는 있을 것) 에 단순히 성공한 packet에 대해 weight만 부여되게 된다. <br />
+<br />
+bandwidth가 작은 채널의 경우, <code class="language-plaintext highlighter-rouge">tx_vector == 1</code> 가 줄고 그만큼 간섭도 줄 것이기 때문에 단순히 개수에 비례해 throughtput이 감소한다.<br />
+<br />
+하지만 bandwidht가 큰 채널의 경우, <code class="language-plaintext highlighter-rouge">tx_vector == 1</code>가 증가하지만 그에 비례해 간섭도 증가하기 때문에 전송되는 packet의 개수는 늘지만 그만큼 전송에 실패하는 packet도 많아지기 때문에 채널 throughput이 기대한 만큼의 향상을 보이지 않은 것 같다.</p>
+
 <h5 id="2번-결과에-대한-대안">&lt;2번 결과에 대한 대안&gt;</h5>
 
 <p>실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
 따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.</p>
-
 </div>
  </div>
  
@@ -292,6 +293,9 @@
             
               
                 
+                  
+                  <li><a href="/posts/proposed03/">proposed Scheme 3차</a></li>
+                  
                   
                 
               

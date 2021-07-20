@@ -17,13 +17,15 @@
 <meta property="og:title" content="proposed Scheme 3차" />
 <meta name="author" content="mye785C83" />
 <meta property="og:locale" content="ko_KR" />
+<meta name="description" content="type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정" />
+<meta property="og:description" content="type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정" />
 <meta property="og:site_name" content="mye785C83" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-06T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="proposed Scheme 3차" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/posts/proposed03/"},"url":"/mye785c83.github.io/posts/proposed03/","author":{"@type":"Person","name":"mye785C83"},"headline":"proposed Scheme 3차","dateModified":"2021-07-06T00:00:00+09:00","datePublished":"2021-07-06T00:00:00+09:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/posts/proposed03/"},"description":"type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정","url":"/mye785c83.github.io/posts/proposed03/","author":{"@type":"Person","name":"mye785C83"},"headline":"proposed Scheme 3차","dateModified":"2021-07-06T00:00:00+09:00","datePublished":"2021-07-06T00:00:00+09:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -32,18 +34,13 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
     <!-- css -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/syntax.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"
-    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-    crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
@@ -59,30 +56,6 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    
-        <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        TeX: {
-          equationNumbers: {
-            autoNumber: "AMS"
-          }
-        },
-        tex2jax: {
-        inlineMath: [ ['$', '$'] ],
-        displayMath: [ ['\$$', '\$$'] ],
-        processEscapes: true,
-      }
-    });
-    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-</script>
-<script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
     
 </head>
 
@@ -141,7 +114,76 @@
      </div>
      
      <div class="divider-box"></div>
-     <div class="px-4">
+     <div class="px-4"><h4 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h4>
+
+<ol>
+  <li>channel 할당
+    <ul>
+      <li>1차와 동일</li>
+    </ul>
+  </li>
+  <li>cst 설정
+    <ul>
+      <li>1차와 동일</li>
+    </ul>
+  </li>
+  <li>time 설정
+    <ul>
+      <li>simulator에서 한번의 t에서 <code class="language-plaintext highlighter-rouge">TIMESLOT_PER_TX</code>만큼의 시뮬레이션이 일어난다.</li>
+      <li>전체 시뮬레이션 시간은 <code class="language-plaintext highlighter-rouge">param_end_time*TIMESLOT_PER_TX</code>인 셈이다.</li>
+      <li>
+        <p>channel에 할당된 node 개수에 비례하게 결정된 <code class="language-plaintext highlighter-rouge">ch_weight</code> 만큼 <code class="language-plaintext highlighter-rouge">param_end_time</code> 을 변경한다.</p>
+
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">ch_end_time</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">round</span><span class="p">,</span> <span class="n">param_end_time</span> <span class="o">*</span> <span class="n">ch_weight</span><span class="p">))</span>
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">TIMESLOT_PER_TX</code> 동안 destination이 있는 AP는 한 번의 packet만 전송할 가능성이 있고 기존의 시뮬레이션 코드에서 각 node의 throughput을 구할 때 전송에 성공한 packet에 대해 <code class="language-plaintext highlighter-rouge">param_end_time</code> 을 단위로 하여 throughput을 구했다.</li>
+      <li>따라서 <code class="language-plaintext highlighter-rouge">ch_weight</code> 만큼 늘어난 end time에 대해 <code class="language-plaintext highlighter-rouge">ch_weight</code> 만큼 timeslot을 줄임으로서 결론적으로 모든 채널이 같은 시간동안 시뮬레이션을 한 것같은 환경을 구현한다.</li>
+      <li>한 번의 <code class="language-plaintext highlighter-rouge">TIMESLOT_PER_TX</code> 동안 packet이 전송완료되므로 <code class="language-plaintext highlighter-rouge">ch_weight</code> 만큼 줄어든 timeslot은 bandwidth가 큰 채널의 경우 전송이 빨리 완료되는 것과 같은 효과를 낸다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="시뮬레이션-결과">시뮬레이션 결과</h2>
+
+<h4 id="시뮬레이션-환경">시뮬레이션 환경</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">g</span> <span class="o">=</span> <span class="mi">10</span>	          <span class="c1"># grid g x g
+</span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>            <span class="c1"># area size
+</span><span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>           <span class="c1"># number of nodes
+</span><span class="n">c</span> <span class="o">=</span> <span class="mi">4</span>             <span class="c1"># number of channels
+</span><span class="n">cs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">82</span>          <span class="c1"># carrier sense threshold
+</span><span class="n">end</span> <span class="o">=</span> <span class="mi">1000</span>        <span class="c1"># simulation end time
+</span><span class="n">m</span> <span class="o">=</span> <span class="mi">6</span>             <span class="c1"># CST margin
+</span></code></pre></div></div>
+
+<h4 id="시뮬레이션-결과-1">시뮬레이션 결과</h4>
+
+<p><img src="/assets/images/20_total_tput.png" alt="throughput graph" /></p>
+
+<p>빨간색의 경우 distance에 따라 node를 균등하게 분배하고 돌린 시뮬레이션(type2)의 결과이고 초록색의 경우 distance의 range를 정해서 비슷한 distance끼리 묶어 node 개수에 비례하게 bandwidth를 설정하고 돌린 시뮬레이션(type3)의 결과이다.</p>
+
+<p>예상한 결과와 다르게 bandwidth를 설정해도 thoroughput의 향상을 확인할 수 없었다.</p>
+
+<h4 id="결과-분석">결과 분석</h4>
+<p>시뮬레이션에서 node 200개는 각 채널에 21, 49, 115, 15 로 분배되었는데 type2 시뮬레이션과 각 채널의 전송에 성공한 packet의 비율을 비교해봤을 때 115개의 노드가 할당된 channel의 경우 성공률이 너무 떨어진 것을 확인할 수 있었다.</p>
+
+<p>실제 네트워크 환경에서 노드가 100개 넘게 할당되는 경우는 너무 드물고 한 채널에 너무 많은 채널이 할당됨으로 인한 collision 증가로 throughput이 증가하지 않고 오히려 감소한 것 같다.</p>
+
+<h4 id="대안">대안</h4>
+
+<ol>
+  <li>biased deployment 코드 수정
+    <ul>
+      <li>처음 새로운 proposed scheme을 구상할 때 단순히 distance 순서로만 할 경우, 한 채널에서 node끼리 심한 distance 차이를 보일 경우 생길 edge 현상을 해결하기 위해 bandwidth를 설정하자고 생각했는데 시뮬레이터에서 node들 간에 distance차는 연속적으로 증가하기 때문에 type2 시뮬레이션을 돌릴 때 channel에 할당된 node들 사이에 distance차가 심하게 발생하도록 biased deployment를 수정하고자 한다.</li>
+    </ul>
+  </li>
+  <li>한 채널에 node가 너무 쏠리는 경우에 어떻게 할 것인지
+    <ul>
+      <li>위의 예시 결과처럼 한 채널에 전체 node의 절반 이상이 쏠리거나 node가 200개만큼 증가하는 등 bandwidth에 의한 이익보다 collision에 의한 손실이 커지는 것을 방지하기 위해 어느 정도 node 할당을 조절해야 할 것 같다.</li>
+    </ul>
+  </li>
+</ol>
 </div>
  </div>
  

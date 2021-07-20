@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-13T18:45:59+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">proposed Scheme 4차</title><link href="/mye785c83.github.io/posts/proposed04/" rel="alternate" type="text/html" title="proposed Scheme 4차" /><published>2021-07-13T00:00:00+09:00</published><updated>2021-07-13T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed04</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed04/"></content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html"></summary></entry><entry><title type="html">EC2 보안강화하기</title><link href="/mye785c83.github.io/posts/EC2_security/" rel="alternate" type="text/html" title="EC2 보안강화하기" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_security</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_security/">&lt;h5 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h5&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/mye785c83.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="/mye785c83.github.io/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2021-07-20T16:31:28+09:00</updated><id>/mye785c83.github.io/feed.xml</id><title type="html">mye785C83</title><author><name>mye785C83</name></author><entry><title type="html">proposed Scheme 4차</title><link href="/mye785c83.github.io/posts/proposed04/" rel="alternate" type="text/html" title="proposed Scheme 4차" /><published>2021-07-13T00:00:00+09:00</published><updated>2021-07-13T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed04</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed04/">&lt;h4 id=&quot;biased-deployment&quot;&gt;biased deployment&lt;/h4&gt;
+
+&lt;h4 id=&quot;distance에-따른-channel-할당-및-channel-bandwidth-설정&quot;&gt;distance에 따른 channel 할당 및 channel bandwidth 설정&lt;/h4&gt;
+
+&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;time 설정
+    &lt;ul&gt;
+      &lt;li&gt;3차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">biased deployment</summary></entry><entry><title type="html">EC2 보안강화하기</title><link href="/mye785c83.github.io/posts/EC2_security/" rel="alternate" type="text/html" title="EC2 보안강화하기" /><published>2021-07-12T00:00:00+09:00</published><updated>2021-07-12T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_security</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_security/">&lt;h5 id=&quot;참고사이트&quot;&gt;참고사이트&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.lesstif.com/security/fail2ban-ssh-43843899.html&quot;&gt;fail2ban 으로 SSH 서버 강화하기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -47,7 +69,76 @@ PasswordAuthentication yes
 
 &lt;h4 id=&quot;하나의-ap-or-mobile-station이-destination이-생겼을-경우&quot;&gt;하나의 AP (or mobile station)이 destination이 생겼을 경우&lt;/h4&gt;
 
-&lt;h4 id=&quot;downlink-하나의-channel에-대해&quot;&gt;(downlink): 하나의 channel에 대해&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">fading</summary></entry><entry><title type="html">proposed Scheme 3차</title><link href="/mye785c83.github.io/posts/proposed03/" rel="alternate" type="text/html" title="proposed Scheme 3차" /><published>2021-07-06T00:00:00+09:00</published><updated>2021-07-06T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed03</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed03/"></content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html"></summary></entry><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h5 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h5&gt;
+&lt;h4 id=&quot;downlink-하나의-channel에-대해&quot;&gt;(downlink): 하나의 channel에 대해&lt;/h4&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">fading</summary></entry><entry><title type="html">proposed Scheme 3차</title><link href="/mye785c83.github.io/posts/proposed03/" rel="alternate" type="text/html" title="proposed Scheme 3차" /><published>2021-07-06T00:00:00+09:00</published><updated>2021-07-06T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed03</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed03/">&lt;h4 id=&quot;type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정&quot;&gt;type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;channel 할당
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cst 설정
+    &lt;ul&gt;
+      &lt;li&gt;1차와 동일&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;time 설정
+    &lt;ul&gt;
+      &lt;li&gt;simulator에서 한번의 t에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOT_PER_TX&lt;/code&gt;만큼의 시뮬레이션이 일어난다.&lt;/li&gt;
+      &lt;li&gt;전체 시뮬레이션 시간은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_end_time*TIMESLOT_PER_TX&lt;/code&gt;인 셈이다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;channel에 할당된 node 개수에 비례하게 결정된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt; 만큼 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_end_time&lt;/code&gt; 을 변경한다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;n&quot;&gt;ch_end_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_end_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch_weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOT_PER_TX&lt;/code&gt; 동안 destination이 있는 AP는 한 번의 packet만 전송할 가능성이 있고 기존의 시뮬레이션 코드에서 각 node의 throughput을 구할 때 전송에 성공한 packet에 대해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;param_end_time&lt;/code&gt; 을 단위로 하여 throughput을 구했다.&lt;/li&gt;
+      &lt;li&gt;따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt; 만큼 늘어난 end time에 대해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt; 만큼 timeslot을 줄임으로서 결론적으로 모든 채널이 같은 시간동안 시뮬레이션을 한 것같은 환경을 구현한다.&lt;/li&gt;
+      &lt;li&gt;한 번의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TIMESLOT_PER_TX&lt;/code&gt; 동안 packet이 전송완료되므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt; 만큼 줄어든 timeslot은 bandwidth가 큰 채널의 경우 전송이 빨리 완료되는 것과 같은 효과를 낸다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;시뮬레이션-결과&quot;&gt;시뮬레이션 결과&lt;/h2&gt;
+
+&lt;h4 id=&quot;시뮬레이션-환경&quot;&gt;시뮬레이션 환경&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;	          &lt;span class=&quot;c1&quot;&gt;# grid g x g
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# area size
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# number of nodes
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# number of channels
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;82&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# carrier sense threshold
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# simulation end time
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# CST margin
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;시뮬레이션-결과-1&quot;&gt;시뮬레이션 결과&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20_total_tput.png&quot; alt=&quot;throughput graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;빨간색의 경우 distance에 따라 node를 균등하게 분배하고 돌린 시뮬레이션(type2)의 결과이고 초록색의 경우 distance의 range를 정해서 비슷한 distance끼리 묶어 node 개수에 비례하게 bandwidth를 설정하고 돌린 시뮬레이션(type3)의 결과이다.&lt;/p&gt;
+
+&lt;p&gt;예상한 결과와 다르게 bandwidth를 설정해도 thoroughput의 향상을 확인할 수 없었다.&lt;/p&gt;
+
+&lt;h4 id=&quot;결과-분석&quot;&gt;결과 분석&lt;/h4&gt;
+&lt;p&gt;시뮬레이션에서 node 200개는 각 채널에 21, 49, 115, 15 로 분배되었는데 type2 시뮬레이션과 각 채널의 전송에 성공한 packet의 비율을 비교해봤을 때 115개의 노드가 할당된 channel의 경우 성공률이 너무 떨어진 것을 확인할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;실제 네트워크 환경에서 노드가 100개 넘게 할당되는 경우는 너무 드물고 한 채널에 너무 많은 채널이 할당됨으로 인한 collision 증가로 throughput이 증가하지 않고 오히려 감소한 것 같다.&lt;/p&gt;
+
+&lt;h4 id=&quot;대안&quot;&gt;대안&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;biased deployment 코드 수정
+    &lt;ul&gt;
+      &lt;li&gt;처음 새로운 proposed scheme을 구상할 때 단순히 distance 순서로만 할 경우, 한 채널에서 node끼리 심한 distance 차이를 보일 경우 생길 edge 현상을 해결하기 위해 bandwidth를 설정하자고 생각했는데 시뮬레이터에서 node들 간에 distance차는 연속적으로 증가하기 때문에 type2 시뮬레이션을 돌릴 때 channel에 할당된 node들 사이에 distance차가 심하게 발생하도록 biased deployment를 수정하고자 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;한 채널에 node가 너무 쏠리는 경우에 어떻게 할 것인지
+    &lt;ul&gt;
+      &lt;li&gt;위의 예시 결과처럼 한 채널에 전체 node의 절반 이상이 쏠리거나 node가 200개만큼 증가하는 등 bandwidth에 의한 이익보다 collision에 의한 손실이 커지는 것을 방지하기 위해 어느 정도 node 할당을 조절해야 할 것 같다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</summary></entry><entry><title type="html">AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정</title><link href="/mye785c83.github.io/posts/EC2_MEN_deploy/" rel="alternate" type="text/html" title="AWS EC2에서 Express.js 서버 배포 및 MongoDB 설정" /><published>2021-07-02T00:00:00+09:00</published><updated>2021-07-02T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/EC2_MEN_deploy</id><content type="html" xml:base="/mye785c83.github.io/posts/EC2_MEN_deploy/">&lt;h5 id=&quot;참고-사이트&quot;&gt;참고 사이트&lt;/h5&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://chinmaypatil.medium.com/deploying-nodejs-express-mongodb-application-on-aws-ec2-e32a8e3ea8a1&quot;&gt;Deploying NodeJS, Express, MongoDB application on AWS EC2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -231,17 +322,27 @@ sduo systemctl status nginx
 
             &lt;p&gt;각 채널에 할당된 cst를 확인해보면 미세하게 $\text{type3}$의 cst가 모두 작은 것을 확인할 수 있다.&lt;/p&gt;
 
-            &lt;p&gt;cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 skewed deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.&lt;/p&gt;
+            &lt;p&gt;cst 할당 방법은 가장 멀리 있는 node를 기준으로 설정하는 방법을 택했고 biased deployment 결과 앞쪽 그룹에 node들이 많이 몰려 있기 때문에 각 채널의 가장 멀리 있는 node의 $\text{distance}$ 값이 모두 증가한다. 따라서 cst 값이 작아질 수 밖에 없다.&lt;/p&gt;
 
             &lt;p&gt;channel 별 throughput을 비교하면 모든 채널의 throughput이 감소하는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1 이하인 channel의 경우, timeslot이 감소해서인 것 같다.&lt;/p&gt;
 
             &lt;p&gt;다만, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;가 1보다 큰 경우에도 channel throughput이 감소하는데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ch_weight&lt;/code&gt;에 의해 늘어난 timeslot의 이득보다 node 개수가 많아지면서 증가한 간섭에 의한 손실이 더 커서인 것으로 예상된다.&lt;/p&gt;
+
+            &lt;p class=&quot;edit-box&quot;&gt;&lt;span class=&quot;edit-info&quot;&gt;21.07.20 수정&lt;/span&gt;
+  python simulator 상에서 time_slot은 작은 시뮬레이션 과정으로 한 time_slot 안에서 일어난 packet 전송은 그 iteration에서 종료된다는 가정 하에 진행된다. 즉, 한 time_slot동안 contention window 경쟁이 일어나며 time_slot 동안 경쟁에 승리해 전송을 시작한 packet이 완료될 때까지 계속 경쟁이 일어난다는 뜻이다.&lt;br /&gt;
+  &lt;br /&gt;
+  bandwidth가 커지면 packet 전송 속도가 그만큼 빨라져야 하는데 weight에 비례하게 timeslot을 변경할 경우, bandwidth가 커 timeslot이 증가한 채널은 packet이 전송이 완료되는데 더 오래 걸린다는 뜻이 된다.&lt;br /&gt;
+  &lt;br /&gt;
+  bandwidth가 커져 packet 전송 속도가 빨라진다는 것은 그만큼 contention window 경쟁 횟수가 증가한다는 것을 의미하기 때문에 한 번의 contention window 경쟁을 나타내는 time_slot의 크기를 bandwidth가 커질 경우 증가시키는 것은 적절하지 않은 설정이었다.&lt;/p&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</summary></entry><entry><title type="html">proposed Scheme 1차</title><link href="/mye785c83.github.io/posts/proposed01/" rel="alternate" type="text/html" title="proposed Scheme 1차" /><published>2021-04-29T00:00:00+09:00</published><updated>2021-04-29T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed01</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed01/">&lt;h2 id=&quot;1차&quot;&gt;1차&lt;/h2&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;대안&quot;&gt;대안&lt;/h4&gt;
+&lt;p&gt;biased deployment 실행시 node가 몰려 있는 distance 범위를 node가 가질 수 있는 distance 범위의 중앙 부분에 올 수 있도록 코드를 변경하였다.&lt;/p&gt;</content><author><name>mye785C83</name></author><category term="ICSL" /><category term="python" /><category term="network" /><category term="wirelessNetwork" /><summary type="html">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</summary></entry><entry><title type="html">proposed Scheme 1차</title><link href="/mye785c83.github.io/posts/proposed01/" rel="alternate" type="text/html" title="proposed Scheme 1차" /><published>2021-04-29T00:00:00+09:00</published><updated>2021-04-29T00:00:00+09:00</updated><id>/mye785c83.github.io/posts/proposed01</id><content type="html" xml:base="/mye785c83.github.io/posts/proposed01/">&lt;h2 id=&quot;1차&quot;&gt;1차&lt;/h2&gt;
 
 &lt;h3 id=&quot;mobile-node-deployment&quot;&gt;Mobile Node Deployment&lt;/h3&gt;
 
@@ -348,6 +449,13 @@ sduo systemctl status nginx
 &lt;h5 id=&quot;2번-결과에-대한-분석&quot;&gt;&amp;lt;2번 결과에 대한 분석&amp;gt;&lt;/h5&gt;
 
 &lt;p&gt;bandwidth가 클수록 그만큼 그 채널에 할당된 node가 많다는 뜻인데 그 채널에 대해서&lt;span style=&quot;color: red;&quot;&gt;‘&lt;strong&gt;만&lt;/strong&gt;’&lt;/span&gt; $weight$에 의해 많은 throughput이 생성된 것처럼 되고 나머지 다른 채널의 경우 모두 $weight$에 의해 throughput이 낮아지기 때문에 $weight$가 큰 채널에 의해 높은 throughput을 가지게된 node와 $weight$가 낮은 채널에 의해 낮은 throupghput을 가지게된 node간의 throughput 상쇄가 일어나 결론적으로는 합이 비슷해지는 것 같다.&lt;/p&gt;
+
+&lt;p class=&quot;edit-box&quot;&gt;&lt;span class=&quot;edit-info&quot;&gt;21.07.20 수정&lt;/span&gt;
+bandwidth를 설정할 경우 node 개수를 제외하고는 packet을 전송하고 받는 과정이 동일하기 때문에 bandwidth가 없는 경우와 유사한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tx_vector == 1&lt;/code&gt; (node 개수에 비례해 약간의 차이는 있을 것) 에 단순히 성공한 packet에 대해 weight만 부여되게 된다. &lt;br /&gt;
+&lt;br /&gt;
+bandwidth가 작은 채널의 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tx_vector == 1&lt;/code&gt; 가 줄고 그만큼 간섭도 줄 것이기 때문에 단순히 개수에 비례해 throughtput이 감소한다.&lt;br /&gt;
+&lt;br /&gt;
+하지만 bandwidht가 큰 채널의 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tx_vector == 1&lt;/code&gt;가 증가하지만 그에 비례해 간섭도 증가하기 때문에 전송되는 packet의 개수는 늘지만 그만큼 전송에 실패하는 packet도 많아지기 때문에 채널 throughput이 기대한 만큼의 향상을 보이지 않은 것 같다.&lt;/p&gt;
 
 &lt;h5 id=&quot;2번-결과에-대한-대안&quot;&gt;&amp;lt;2번 결과에 대한 대안&amp;gt;&lt;/h5&gt;
 
