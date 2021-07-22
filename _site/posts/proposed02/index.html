@@ -57,30 +57,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     
-        <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        TeX: {
-          equationNumbers: {
-            autoNumber: "AMS"
-          }
-        },
-        tex2jax: {
-        inlineMath: [ ['$', '$'] ],
-        displayMath: [ ['\$$', '\$$'] ],
-        processEscapes: true,
-      }
-    });
-    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-</script>
-<script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-    
 </head>
 
   <body style="background-color: #efefef; height: 100% !important;"
@@ -191,6 +167,9 @@
 
 <h4 id="대안">대안</h4>
 <p>biased deployment 실행시 node가 몰려 있는 distance 범위를 node가 가질 수 있는 distance 범위의 중앙 부분에 올 수 있도록 코드를 변경하였다.</p>
+
+<p class="edit-box"><span class="edit-info">21.07.20 수정</span>
+simulator 상에서 한 번의 t에서 진행되는 네트워크 과정이 한 번의 cw 경쟁이므로 bandwidth가 증가하면 이 경쟁 횟수가 증가해야한다. 따라서 <code class="language-plaintext highlighter-rouge">param_end_time</code> 을 <code class="language-plaintext highlighter-rouge">ch_weight</code> 만큼 늘려 경쟁 횟수를 늘려주고 모든 채널은 같은 시간동안 시뮬레이션이 진행되기 때문에 그만큼 <code class="language-plaintext highlighter-rouge">TIMESLOT_PER_TX</code> 를 줄인다.</p>
 </div>
  </div>
  
@@ -207,6 +186,9 @@
             
               
                 
+                  
+                  <li><a href="/posts/proposed04/">proposed Scheme 4차</a></li>
+                  
                   
                 
               
@@ -278,15 +260,6 @@
               
             
           
-            
-              
-                
-                  
-                  <li><a href="/posts/10.1155_2019_2149606/">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</a></li>
-                  
-                  
-                
-              
             
           
       </ul>

@@ -98,7 +98,8 @@ pre {
   background: #fafafa;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 3rem !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 2rem !important;
   padding: 30px 30px 30px 40px;
   position: relative;
   white-space: pre;

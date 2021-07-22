@@ -17,15 +17,15 @@
 <meta property="og:title" content="python network simulator 분석" />
 <meta name="author" content="mye785C83" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’" />
-<meta property="og:description" content="variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’" />
+<meta name="description" content="RunSim parameter" />
+<meta property="og:description" content="RunSim parameter" />
 <meta property="og:site_name" content="mye785C83" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-04-28T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="python network simulator 분석" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/posts/python_simulator/"},"description":"variable setting ```python ‘’’ [input] —————————————————————- NUM_GRID, grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨 AREA_SIZE, 한 grid 당 사이즈 NUM_NODES, mobile node 개수 NUM_CH, channel 개수 PROTO, protocol(tramsmission) type 0: carriersense 1: DSC 2: smart 3: new carrier CS, CST 값 SEED, seed 값 END, simulation end time. END만큼 각 채널이 전송 반복 VERBOSE, IDEAL, LATEX, MARGIN, cst margin 값 (실제 setting cst = 설정 cst + margin) DEPLOY, mobile node 분포 형태 0: seed를 이용한 random 분포 1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포 SET_CHANNEL, 0: 기존의 방식대로 1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록 2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록 —————————————————————— ‘’’","url":"/mye785c83.github.io/posts/python_simulator/","author":{"@type":"Person","name":"mye785C83"},"headline":"python network simulator 분석","dateModified":"2021-04-28T00:00:00+09:00","datePublished":"2021-04-28T00:00:00+09:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/mye785c83.github.io/posts/python_simulator/"},"description":"RunSim parameter","url":"/mye785c83.github.io/posts/python_simulator/","author":{"@type":"Person","name":"mye785C83"},"headline":"python network simulator 분석","dateModified":"2021-04-28T00:00:00+09:00","datePublished":"2021-04-28T00:00:00+09:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -138,51 +138,88 @@
      </div>
      
      <div class="divider-box"></div>
-     <div class="px-4"><h4 id="variable-setting">variable setting</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">'''
-[input]
-----------------------------------------------------------------
-NUM_GRID,       grid 개수. NUM_GRID=n에 대해 n*n개의 AP가 생성됨
-AREA_SIZE,      한 grid 당 사이즈
-NUM_NODES,      mobile node 개수
-NUM_CH,         channel 개수
-PROTO,          protocol(tramsmission) type 
-    0: carriersense
-    1: DSC
-    2: smart
-    3: new carrier
-CS,             CST 값 
-SEED,           seed 값
-END,            simulation end time. END만큼 각 채널이 전송 반복
-VERBOSE, 
-IDEAL, 
-LATEX, 
-MARGIN,         cst margin 값 (실제 setting cst = 설정 cst +  margin)
-DEPLOY,         mobile node 분포 형태
-    0: seed를 이용한 random 분포
-    1: AP와 ms 사이의 distance가 특정 범위에 몰리도록 분포
-SET_CHANNEL,
-    0: 기존의 방식대로
-    1: 각 채널이 distance에 따라 같은 개수의 node를 가지도록
-    2: 각 채널이 assigned node 개수에 따라 다른 bandwidth를 가지도록
-------------------------------------------------------------------
-'''</span>
+     <div class="px-4"><h2 id="runsim-parameter">RunSim parameter</h2>
 
-<span class="k">def</span> <span class="nf">RunSim</span><span class="p">(</span><span class="n">NUM_GRID</span><span class="p">,</span> <span class="n">NUM_NODES</span><span class="p">,</span> <span class="n">NODES_PER_CELL</span><span class="p">,</span> <span class="n">AREA_SIZE</span><span class="p">,</span> <span class="n">NUM_CH</span><span class="p">,</span> <span class="n">CS</span><span class="p">,</span> <span class="n">PROTO</span><span class="p">,</span> <span class="n">SEED</span> <span class="p">,</span><span class="n">END</span><span class="p">,</span> <span class="n">VERBOSE</span><span class="p">,</span> <span class="n">CH_BW_LOSS</span><span class="p">,</span> <span class="n">LATEX</span><span class="p">,</span> <span class="n">IDEAL</span><span class="p">,</span> <span class="n">MARGIN</span><span class="p">,</span> <span class="n">TOKEN</span><span class="p">,</span> <span class="n">DEPLOY</span><span class="p">,</span><span class="n">SET_CHANNEL</span><span class="p">):</span>
-    <span class="c1"># variable setting
-</span>    <span class="n">param_seed</span> <span class="o">=</span> <span class="n">SEED</span>
-    <span class="n">param_num_grid</span> <span class="o">=</span> <span class="n">NUM_GRID</span>
-    <span class="n">param_num_aps</span> <span class="o">=</span> <span class="n">param_num_grid</span> <span class="o">*</span> <span class="n">param_num_grid</span>
-    <span class="n">param_num_nodes</span> <span class="o">=</span> <span class="n">NUM_NODES</span>
-    <span class="n">param_num_channels</span> <span class="o">=</span> <span class="n">NUM_CH</span>
-    <span class="n">param_end_time</span> <span class="o">=</span> <span class="n">END</span>
-    <span class="n">param_cs_thresh</span> <span class="o">=</span> <span class="n">CS</span>
-    <span class="n">param_protocol</span> <span class="o">=</span> <span class="n">PROTO</span>
-    <span class="n">param_verbose</span> <span class="o">=</span> <span class="n">VERBOSE</span>
-    <span class="n">param_ch_bw_loss</span> <span class="o">=</span> <span class="n">CH_BW_LOSS</span>
-    <span class="n">param_export_latex</span> <span class="o">=</span> <span class="n">LATEX</span>
-    <span class="n">param_margin</span> <span class="o">=</span> <span class="n">MARGIN</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RunSim</span><span class="p">(</span><span class="n">NUM_GRID</span><span class="o">=</span><span class="n">g</span><span class="p">,</span> <span class="n">AREA_SIZE</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">NUM_NODES</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">NUM_CH</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">PROTO</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">CS</span><span class="o">=</span><span class="n">cs</span><span class="p">,</span> <span class="n">SEED</span><span class="o">=</span><span class="n">s</span><span class="p">,</span>
+                                 <span class="n">END</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">VERBOSE</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">IDEAL</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">LATEX</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> 
+                                 <span class="n">MARGIN</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
 </code></pre></div></div>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">parameter</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}GRID$</td>
+      <td style="text-align: center">GRID 개수, 시뮬레이션 환경 영역이 NUM_GRID*NUM_GRID로 나뉜다.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$AREA\text{_}SIZE$</td>
+      <td style="text-align: center">GRID 하나 크기</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}NODES$</td>
+      <td style="text-align: center">node (mobile station) 개수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}CH$</td>
+      <td style="text-align: center">channel 개수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$PROTO$</td>
+      <td style="text-align: center"><span class="warning">(int)</span> protocol type</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$CS$</td>
+      <td style="text-align: center">constant carrier sense threshold</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$SEED$</td>
+      <td style="text-align: center">random seed</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$END$</td>
+      <td style="text-align: center">simulation end time (반복 횟수)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$MARGIN$</td>
+      <td style="text-align: center">CST MARGIN (cst = $CS$ + $MARGIN$)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="proto">PROTO</h4>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">type</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">carriersense</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">DSC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">smart</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">new carrier</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="simulation-logic">simulation logic</h2>
 
@@ -204,14 +241,14 @@ SET_CHANNEL,
 <p><img src="/assets/images/simulation_flowchart.jpg" alt="simulation flowchart" /></p>
 
 <ul>
-  <li>한번의 t iteration에서 각 channel은 <code class="language-plaintext highlighter-rouge">time_slot_per_tx</code> 동안 simulation을 진행한다.</li>
+  <li>t에 대한 한번의 iteration에서 각 channel은 <code class="language-plaintext highlighter-rouge">time_slot_per_tx</code> 동안 simulation을 진행한다.</li>
   <li>destination을 가진 AP들 중 가장 작은 contention window(<code class="language-plaintext highlighter-rouge">win_count</code>)를 가진 AP가 packet 전송을 시작한다.
     <ul>
       <li>destination을 가진 AP들은 모두 channel이 idle이라고 판단하고 contention window count를 시작한 것</li>
       <li><code class="language-plaintext highlighter-rouge">win_count</code>만큼 모든 AP들이 contention window count를 진행한 것</li>
     </ul>
   </li>
-  <li>나머지 destiation을 가진 AP들은 carrier sensing을 통해 busy로 감지될 경우 transmission 시도를 pause한다.</li>
+  <li>나머지 destination을 가진 AP들은 carrier sensing을 통해 busy로 감지될 경우 transmission 시도를 pause한다.</li>
   <li>channel을 idle로 탐지한 AP들의 경우 자신의 남은 contention window에 대해 다시 count를 시작한다.</li>
   <li>이 중 가장 작은 contension window를 가진 AP가 packet 전송을 시작한다.</li>
   <li>누적된 <code class="language-plaintext highlighter-rouge">win_count</code> (<code class="language-plaintext highlighter-rouge">slot_count</code>)가 <code class="language-plaintext highlighter-rouge">time_slot_per_tx</code> 커지거나 더 이상 전송을 시도하는 AP가 없을 경우, 해당 iteration은 종료되고 전송을 시작한 packet들에 대해 SNR을 구해 packet이 성공적으로 도착했는지 판단한다.</li>
@@ -221,7 +258,179 @@ SET_CHANNEL,
 
 <h4 id="biased-deployment-환경-구현">biased deployment 환경 구현</h4>
 
+<p><code class="language-plaintext highlighter-rouge">biased_dist</code> 변수를 설정해 node의 1/3을 associated AP와의 distance가 특정 범위에 몰리도록 설정한다.</p>
+
+<ol>
+  <li>random하게 AP index를 고른다.</li>
+  <li>AP의 좌표로부터 node의 x, y좌표가 각각 <code class="language-plaintext highlighter-rouge">biased_dist</code> 에서 <code class="language-plaintext highlighter-rouge">biased_dist+1</code> 사이의 임의의 값만큼 떨어지도록 node의 좌표를 설정한다.</li>
+</ol>
+
+<h4 id="carrier-sensing-threshold-설정">carrier sensing threshold 설정</h4>
+
+<p>node를 distance에 따라 균등하게 분배하거나 distance를 균등하게 분배한 후 node를 할당하는 방식의 simulation의 경우 carrier sensing threshold를 해당 채널에 할당된  node들 중 가장 큰 distance를 가진 node를 기준으로 carrier sensing threshold를 가질 수 있도록 코드를 구현한다.</p>
+
+<ol>
+  <li>채널 할당 시, 거리 순으로 node index를 정렬한다.</li>
+  <li>거리 순으로 node index를 돌며 채널을 0부터 할당할 때, 채널 index가 증가하는 시점에 가장 마지막에 해당 채널에 할당된 node index를 구한다.</li>
+  <li>구한 node index가 자신의 associated AP와 transmission을 성공할 수 있는 <code class="language-plaintext highlighter-rouge">MinCSTThresh</code> 를 구해 해당 값을 channel cst로 정한다.</li>
+</ol>
+
 <h4 id="distance-range-설정">distance range 설정</h4>
+
+<p>associated AP와 비슷한 distance를 가진 node들을 같은 채널에 묶기 위해 각 채널에 distance range를 정한다.</p>
+
+<p>전체 node의 distance 최솟값과 최댓값 사이의 범위를 channel 개수만큼 균등하게 나누어 node의 associated AP와의 거리가 channel의 distance range 안에 들어올 경우 node를 해당 채널에 할당한다.</p>
+
+<h4 id="channel-bandwidth-설정">channel bandwidth 설정</h4>
+
+<p>distance range 설정을 통해 채널에 할당된 node들의 개수에 비례하게 channel_weight 를 설정해 해당 값을 bandwidth로 사용<br />
+=&gt; 기준 값은 node 균등 분배시 각 채널에 할당되는 node 개수 (<code class="language-plaintext highlighter-rouge">param_num_node/param_num_channel</code>)</p>
+
+<h2 id="수정된-runsim">수정된 RunSim</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RunSim</span><span class="p">(</span><span class="n">NUM_GRID</span><span class="o">=</span><span class="n">g</span><span class="p">,</span> <span class="n">AREA_SIZE</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">NUM_NODES</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">NUM_CH</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">PROTO</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">CS</span><span class="o">=</span><span class="n">cs</span><span class="p">,</span> <span class="n">SEED</span><span class="o">=</span><span class="n">s</span><span class="p">,</span>
+                              <span class="n">END</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">VERBOSE</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">IDEAL</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> 
+                              <span class="n">LATEX</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">MARGIN</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">DEPLOY</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                              <span class="n">SET_CHANNEL</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">SET_CST</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">BIASED_DIST</span><span class="o">=</span><span class="n">biased</span><span class="p">)</span>
+</code></pre></div></div>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">parameter</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}GRID$</td>
+      <td style="text-align: center">GRID 개수, 시뮬레이션 환경 영역이 NUM_GRID*NUM_GRID로 나뉜다.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$AREA\text{_}SIZE$</td>
+      <td style="text-align: center">GRID 하나 크기</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}NODES$</td>
+      <td style="text-align: center">node (mobile station) 개수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$NUM\text{_}CH$</td>
+      <td style="text-align: center">channel 개수</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$PROTO$</td>
+      <td style="text-align: center"><span class="warning">(int)</span> protocol type</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$CS$</td>
+      <td style="text-align: center">constant carrier sense threshold</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$SEED$</td>
+      <td style="text-align: center">random seed</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$END$</td>
+      <td style="text-align: center">simulation end time (반복 횟수)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$MARGIN$</td>
+      <td style="text-align: center">CST MARGIN (cst = $CS$ + $MARGIN$)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><span style="color:blue">$DEPLOY$</span></td>
+      <td style="text-align: center"><span class="warning">(int)</span> <span style="color:blue">deployment type</span></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><span style="color:blue">$SET\text{_}CHANNEL$</span></td>
+      <td style="text-align: center"><span class="warning">(int)</span> <span style="color:blue">channel setting type</span></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><span style="color:blue">$SET\text{_}CST$</span></td>
+      <td style="text-align: center"><span class="warning">(int)</span> <span style="color:blue">cst standard type</span></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><span style="color:blue">$BIASED\text{_}DIST$</span></td>
+      <td style="text-align: center"><span style="color:blue">특정하게 몰릴 distance 값</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="deploy">DEPLOY</h4>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">type</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">random deployment</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">biased deployment</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="set_channel">SET_CHANNEL</h4>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">type</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">random setting</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">node의 associated AP와의 distance에 따른 균등 분배</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">균등한 distance range 설정에 따른 node 분배 및 node 개수에 비례하는 channel bandwidth 설정</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="set_cst">SET_CST</h4>
+
+<table class="math-table">
+  <thead>
+    <tr>
+      <th style="text-align: center">type</th>
+      <th style="text-align: center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">모든 node가 <code class="language-plaintext highlighter-rouge">RunSim</code> parameter로 넘어온 cst 값을 가짐</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">cst설정의 기준 node를 해당 채널에 할당된 node들의 end node로 설정</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">cst설정의 기준 node를 해당 채널에 할당된 node들의 middle node로 설정</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center"><span class="warning">(SET_CHANNEL=2인 경우에만 유효)</span> cst를 SET_CHANNEL=1 인 경우와 동일하게 설정</td>
+    </tr>
+  </tbody>
+</table>
 </div>
  </div>
  
@@ -238,6 +447,9 @@ SET_CHANNEL,
             
               
                 
+                  
+                  <li><a href="/posts/proposed04/">proposed Scheme 4차</a></li>
+                  
                   
                 
               
@@ -309,15 +521,6 @@ SET_CHANNEL,
               
             
           
-            
-              
-                
-                  
-                  <li><a href="/posts/10.1155_2019_2149606/">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</a></li>
-                  
-                  
-                
-              
             
           
       </ul>

@@ -151,6 +151,11 @@
 <p class="comment-box"><strong>WHY?</strong>
 한 channel에 할당된 node들 사이에 distance차가 목표한 바와 다르게 커질 수 있기 때문</p>
 
+<ol>
+  <li>random하게 AP index를 고른다.</li>
+  <li>AP의 좌표로부터 node의 x, y좌표가 각각 <code class="language-plaintext highlighter-rouge">biased_dist</code> 에서 <code class="language-plaintext highlighter-rouge">biased_dist+1</code> 사이의 임의의 값만큼 떨어지도록 node의 좌표를 설정한다.</li>
+</ol>
+
 <h3 id="setting-channel-and-cst">Setting channel and CST</h3>
 
 <h4 id="type1-기존-base-simulator-logic">type1. 기존 base simulator logic</h4>
@@ -184,7 +189,7 @@
   <li>cst 설정
     <ul>
       <li>channel에 할당된 node들 중 distance값이 가장 큰 node 기준</li>
-      <li>해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정</li>
+      <li>해당 node가 transmission을 성공할 수 있는 SNR 크기를 경계로 하여 CST 설정</li>
     </ul>
   </li>
 </ol>
@@ -216,7 +221,7 @@
   <li>cst 설정
     <ul>
       <li>channel에 할당된 node들 중 distance값이 가장 큰 node 기준</li>
-      <li>해당 node가 견딜 수 있는 SNR 크기를 경계로 하여 CST 설정</li>
+      <li>해당 node가 transmission을 성공할 수 있는 SNR 크기를 경계로 하여 CST 설정</li>
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">stat_rx_packets_ms</code> 카운트
@@ -255,7 +260,7 @@ bandwidth가 작은 채널의 경우, <code class="language-plaintext highlighte
 
 <h5 id="2번-결과에-대한-대안">&lt;2번 결과에 대한 대안&gt;</h5>
 
-<p>실제로는 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
+<p>실제 네트워크 환경에서 bandwidth가 커지면 그만큼 $\text{mbps}$ 가 커져서 한 timeslot에 더 많은 packet이 전송될 수 있다.(수신을 성공하는지와는 관계 없이)
 따라서 성공한 packet에 $weight$를 부여하는 대신 timeslot 자체를 $weight$에 따라 조절해 bandwidth가 커 weight가 커지면 timeslot도 커지게 해 비슷한 효과를 내려고 한다.</p>
 </div>
  </div>
@@ -273,6 +278,9 @@ bandwidth가 작은 채널의 경우, <code class="language-plaintext highlighte
             
               
                 
+                  
+                  <li><a href="/posts/proposed04/">proposed Scheme 4차</a></li>
+                  
                   
                 
               
@@ -344,15 +352,6 @@ bandwidth가 작은 채널의 경우, <code class="language-plaintext highlighte
               
             
           
-            
-              
-                
-                  
-                  <li><a href="/posts/10.1155_2019_2149606/">A Simple and Practical Scheme Using Multiple Channels for Improving System Spectral Efficiency of Highly Dense Wireless LANs</a></li>
-                  
-                  
-                
-              
             
           
       </ul>

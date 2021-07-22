@@ -138,11 +138,53 @@
      </div>
      
      <div class="divider-box"></div>
-     <div class="px-4"><h4 id="biased-deployment">biased deployment</h4>
+     <div class="px-4"><h2 id="biased-deployment">biased deployment</h2>
 
-<h4 id="distance에-따른-channel-할당-및-channel-bandwidth-설정">distance에 따른 channel 할당 및 channel bandwidth 설정</h4>
+<h4 id="구현하고자-하는-결과">구현하고자 하는 결과</h4>
 
-<h4 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h4>
+<p>적어도 하나의 채널에서는 아래와 같이 node들 간에 급격한 distance 차이가 발생했으면 좋겠다.</p>
+
+<p><img src="/assets/images/distDistributionPrediction.png" alt="distance distribution prediction" /></p>
+
+<h4 id="logic">logic</h4>
+
+<p>AP는 <code class="language-plaintext highlighter-rouge">param_num_grid * param_num_grid</code> 만큼 각 grid의 중앙에 위치한다.</p>
+
+<p>simulator 상에서 distance는 node의 좌표와 AP의 좌표를 직선 거리로 측정되며 node는 자신과 가장 가까운 AP를 associated AP로 가지므로 simulator 상에서 AP와 node가 가질 수 있는 distance의 최대 거리는 $\cfrac{\text{param_area_size}*\sqrt{2}}{2}$ 이다.</p>
+
+<p><img src="/assets/images/apArea.png" alt="AP area" /></p>
+
+<p>따라서 node가 가질 수 있는 distance의 범위는 $0 \le \text{dist} &lt;  \cfrac{\text{param_area_size} \times \sqrt{2}}{2}$가 된다.</p>
+
+<ol>
+  <li>node가 가질 수 있는 distance의 범위를 $ \text{param_num_channel} \times 2 $ 등분 한다.
+$$
+\text{dist_range} = \cfrac{\text{param_area_size}*\sqrt{2}}{2 \times (\text{param_num_channel} \times 2)}
+$$</li>
+  <li>각 등분을 0부터 $ \text{param_num_channel} \times 2-1 $ 로 indexing 한 후, $2$에서 $ \text{param_num_channel} \times 2-3 $ 사이의 번호를 임의로 고른다.</li>
+  <li>고른 index를 바탕으로 $\text{dist_left}$와 $\text{dist_right}$를 구한다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dist_left</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="n">param_num_channels</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist_range</span>
+<span class="n">dist_right</span> <span class="o">=</span> <span class="n">dist_left</span> <span class="o">+</span> <span class="n">dist_range</span>
+</code></pre></div>    </div>
+  </li>
+  <li>node의 $\cfrac{\text{param_num_node} \times 3}{\text{param_num_channel} \times 2}$ 만큼은 random하게 고른 AP로부터 $0$에서 $\text{dist_left}$ 사이의 거리를 갖도록 좌표를 설정하고 나머지 node들은 $\text{dist_right}$에서 $\cfrac{\text{param_area_size} \times \sqrt{2}}{2}$사이의 거리를 갖도록 좌표를 설정한다.</li>
+</ol>
+
+<p>위와 같은 단계로 node를 deployment할 경우, node의 distance distribution을 볼 때 $\text{dist_left}$와 $\text{dist_right}$ 사이의 값이 없어지고 앞 영역에 $\cfrac{1}{4}$ 이상 $\cfrac{1}{2}$이하의 node가 가기 때문에 거리 순으로 균등한 node를 채널에 할당할 경우 한 채널에 할당된 node들 사이에 distance 차이가 급격하게 발생하는 효과를 낼 수 있다.</p>
+
+<h6 id="예시-결과">[예시 결과]</h6>
+
+<p><img src="/assets/images/distanceDistribuitonExample.png" alt="distance distribution example" /></p>
+
+<h2 id="distance에-따른-channel-할당-및-channel-bandwidth-설정">distance에 따른 channel 할당 및 channel bandwidth 설정</h2>
+
+<p>한 채널에 너무 많은 node가 몰리는 것을 방지하기 위해 거리순으로 node를 channel 0번부터 할당하면서 기존의 node의 균등 분배의 경우 한 channel이 할당 받는 node의 개수 ($\cfrac{\text{param_num_node}}{\text{param_num_channel}}$)가 넘어갈 경우, <code class="language-plaintext highlighter-rouge">testTransmit</code> 을 통해 transmit을 test한 후, 통과할 경우 channel 할당을 유지하고 아닐 경우 해당 node부터 다음 channel에 할당을 시작한다.</p>
+
+<h4 id="testtransmit">testTransmit</h4>
+
+<p>임의의 AP를 5개 골라 해당 AP들이 모두 parameter로 넘어온 node가 할당받을 channel을 이용해 자신의 node에게 packet을 전송하고 있다고 가정한다. parameter로 넘어온 node가 이 경우에 packet을 성공적으로 수신할 수 있을지 SNR을 구해 해당 node가 channel을 할당받아도 될지를 결정한다.</p>
+
+<h2 id="type3-channel에-할당된-node-개수에-따른-channel-bandwidth-설정">type3. channel에 할당된 node 개수에 따른 channel bandwidth 설정</h2>
 
 <ol>
   <li>channel 할당
@@ -162,6 +204,23 @@
   </li>
 </ol>
 
+<h2 id="시뮬레이션-결과">시뮬레이션 결과</h2>
+
+<h4 id="시뮬레이션-환경">시뮬레이션 환경</h4>
+
+<p>3차와 동일</p>
+
+<h4 id="시뮬레이션-결과-1">시뮬레이션 결과</h4>
+
+<p>seed에 따라 결과가 달라진다.</p>
+
+<p>seed가 바뀜에 따라 어떤 경우 type3가 type2보다 throughput이 더 높고 type2가 type3보다 더 높은 경우도 있었다. 두 경우의 차이를 비교해보았더니 channel 0번에 bandwidth가 커지면서 즉, node의 개수가 많아지면서 channel의 end node로 설정한 cst 값이 type3에서 더 작아지게 되었다.</p>
+
+<p>cst 때문에 throughput 감소가 일어난 것 같아 type2가 더 높게 나온 seed에서 <code class="language-plaintext highlighter-rouge">SET_CHANNEL=2</code>, <code class="language-plaintext highlighter-rouge">SET_CST=3</code> 환경의 시뮬레이션을 추가해 결과를 확인해봤더니 이번엔 2배 가까이 thorughput 향상이 일어났다.</p>
+
+<h4 id="앞으로의-방향">앞으로의 방향</h4>
+
+<p>먼저 seed간의 throughput 차이가 왜 발생했는지부터 파악한 뒤, cst 설정과 bandwidth 설정 사이의 throughput 향상을 위한 model을 찾아야 할 것 같다.</p>
 </div>
  </div>
  
